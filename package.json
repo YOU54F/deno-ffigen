@@ -1,0 +1,8 @@
+{
+  "name": "bun-ffigen",
+  "module": "mod.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.3.0"
+  }
+}

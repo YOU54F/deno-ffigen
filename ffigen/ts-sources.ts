@@ -49,14 +49,13 @@ function buildSymbols(
 ): string {
   const symbolsGen = [...functions.entries()].map(([name, f]) => {
     const parameters = f.parameters
-      .map((p) => `"${p.type.nativeType}"`)
+      .map((p) => `${p.type.nativeType}`)
       .join(", ");
 
     return m`
         ${name}: {
-          name: "${f.fullName}",
-          parameters: [${parameters}],
-          result: "${f.result.nativeType}"
+          args: [${parameters}],
+          returns: ${f.result.nativeType}
         }
       `;
   }).join(",\n");
@@ -167,6 +166,7 @@ function buildSafeFFI() {
 
 function buildTypeDefs(typeDefs: Map<string, TypeDef>): string {
   const typeDefsSource = [...typeDefs.entries()].map(([name, t]) => {
+    console.log('buildTypeDefs',{type:t.type.tsType,name,location:t.location})
     return `  /** ${t.location} */\n` +
       `  export type ${name} = ${t.type.tsType};`;
   }).join("\n\n");
@@ -191,6 +191,8 @@ function buildEnums(enums: Map<string, EnumDef>): string {
 
 function buildFunctions(functions: Map<string, FunctionDef>): string {
   const functionsSource = [...functions.entries()].map(([name, f]) => {
+    console.log('buildFunctions',{name, f})
+
     return `  /** ${f.location} */\n` +
       `  ${`export declare function ${name}(${
         f.parameters.map((p) => `${p.name}: ${p.type.tsType}`).join(", ")

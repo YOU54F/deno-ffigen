@@ -136,7 +136,7 @@ export function extractEnums(
       return [lib.mapName(e.name), {
         originalName: e.name,
         location: lib.formatLocation(e.location),
-        type: { tsType: "enum", nativeType: "i32" },
+        type: { tsType: "enum", nativeType: "FFIType.i32" },
         fields: e.fields.map((v) => ({ name: v.name, value: v.value })),
       }];
     }),
@@ -236,13 +236,17 @@ function getTypeInfo(ctx: GetTypeInfoContext): TypeInfo {
 
 function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   if (type.tag === ":pointer") {
+    if (type.type.tag === ":char") {
+      console.log('pppppointer',{tag: type.type.tag,name})
+      return { tsType: `FFIType.cstring`, nativeType: `FFIType.cstring` };
+    }
     if (name === null) {
       const rec = getTypeInfo({ type: type.type, name: null, lib });
 
-      return { tsType: `Pointer<${rec.tsType}>`, nativeType: "pointer" };
+      return { tsType: `Pointer<${rec.tsType}>`, nativeType: "FFIType.pointer" };
     }
 
-    return { tsType: `Pointer<"${name}">`, nativeType: "pointer" };
+    return { tsType: `Pointer<"${name}">`, nativeType: "FFIType.pointer" };
   }
 
   if (type.tag === ":function-pointer") {
@@ -253,17 +257,17 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   }
 
   if (type.tag === ":struct") {
-    return { tsType: `StructPointer<"${type.name}">`, nativeType: "pointer" };
+    return { tsType: `StructPointer<"${type.name}">`, nativeType: "FFIType.pointer" };
   }
 
   if (type.tag === "struct") {
     if (name === null && type.name !== null) {
-      return { tsType: `StructPointer<"${type.name}">`, nativeType: "pointer" };
+      return { tsType: `StructPointer<"${type.name}">`, nativeType: "FFIType.pointer" };
     } else if (name === null && type.name === null) {
       throw new Error("Struct does not have a name: " + JSON.stringify(type));
     }
 
-    return { tsType: `StructPointer<"${name}">`, nativeType: "pointer" };
+    return { tsType: `StructPointer<"${name}">`, nativeType: "FFIType.pointer" };
   }
 
   if (type.tag === "union") {
@@ -278,62 +282,75 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   }
 
   if (type.tag === ":void") {
-    return { tsType: "void", nativeType: "void" };
+    return { tsType: "FFIType.void", nativeType: "FFIType.void" };
   }
 
   if (type.tag === "size_t") {
-    return { tsType: `number`, nativeType: "usize" };
+    return { tsType: `FFIType.usize`, nativeType: "FFIType.usize" };
   }
 
   if (
     (type.tag === ":char" && type["bit-size"] === 8) ||
     (type.tag === ":signed-char" && type["bit-size"] === 8)
   ) {
-    return { tsType: `number`, nativeType: "i8" };
+    return { tsType: `FFIType.i8`, nativeType: "int8_t" };
   }
 
   if (
-    (type.tag === ":_Bool" && type["bit-size"] === 8) ||
+    (type.tag === ":_Bool" && type["bit-size"] === 8)
+  ) {
+    console.log('bool?',{type})
+    return { tsType: `FFIType.bool`, nativeType: "FFIType.bool" };
+  }
+  if (
     (type.tag === ":unsigned-char" && type["bit-size"] === 8)
   ) {
-    return { tsType: `number`, nativeType: "u8" };
+    return { tsType: `FFIType.u8`, nativeType: "FFIType.u8" };
+    // return { tsType: `FFIType.u8`, nativeType: "uint8_t" };
   }
 
   if (
     (type.tag === ":short" && type["bit-size"] === 16)
   ) {
-    return { tsType: `number`, nativeType: "i16" };
+    return { tsType: `FFIType.i16`, nativeType: "FFIType.i16" };
+    // return { tsType: `FFIType.i16`, nativeType: "int16_t" };
   }
 
   if (
     (type.tag === ":unsigned-short" && type["bit-size"] === 16)
   ) {
-    return { tsType: `number`, nativeType: "u16" };
+    return { tsType: `FFIType.u16`, nativeType: "FFIType.u16" };
+    // return { tsType: `FFIType.u16`, nativeType: "uint16_t" };
   }
 
   if (type.tag === ":int" && type["bit-size"] === 32) {
-    return { tsType: `number`, nativeType: "i32" };
+    return { tsType: `FFIType.i32`, nativeType: "FFIType.i32" };
+    // return { tsType: `FFIType.i32`, nativeType: "int32_t" };
   }
 
   if (
     (type.tag === ":unsigned-int" && type["bit-size"] === 32)
   ) {
-    return { tsType: `number`, nativeType: "u32" };
+    return { tsType: `FFIType.u32`, nativeType: "FFIType.u32" };
+    // return { tsType: `FFIType.u32`, nativeType: "uint32_t" };
   }
 
   if (
     (type.tag === ":long" && type["bit-size"] === 64) ||
     (type.tag === ":long-long" && type["bit-size"] === 64)
   ) {
-    return { tsType: `bigint`, nativeType: "i64" };
+    return { tsType: `FFIType.i64`, nativeType: "FFIType.i64" };
+    // return { tsType: `FFIType.i64`, nativeType: "int64_t" };
   }
 
   if (type.tag === ":float" && type["bit-size"] === 32) {
-    return { tsType: `bigint`, nativeType: "f64" };
+    return { tsType: `FFIType.f32`, nativeType: "FFIType.f32" };
+    // return { tsType: `FFIType.f32`, nativeType: "float" };
   }
 
   if (type.tag === ":double" && type["bit-size"] === 64) {
-    return { tsType: `bigint`, nativeType: "f64" };
+    return { tsType: `FFIType.f64`, nativeType: "FFIType.f64" };
+    // return { tsType: `FFIType.f64`, nativeType: "double" };
   }
 
   if (type.tag === ":long-double" && type["bit-size"] === 128) {
@@ -344,7 +361,8 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
     (type.tag === ":unsigned-long" && type["bit-size"] === 64) ||
     (type.tag === ":unsigned-long-long" && type["bit-size"] === 64)
   ) {
-    return { tsType: `bigint`, nativeType: "u64" };
+    return { tsType: `FFIType.u64`, nativeType: "FFIType.u64" };
+    // return { tsType: `FFIType.u64`, nativeType: "uint64_t" };
   }
 
   // TODO: check if this works
