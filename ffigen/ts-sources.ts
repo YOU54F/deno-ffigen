@@ -50,15 +50,12 @@ function buildSymbols(
   const symbolsGen = [...functions.entries()].map(([name, f]) => {
     const parameters = f.parameters
       .map((p) => `${p.type.nativeType}`)
-      .join(", ");
+      .join(" ");
 
     return m`
-        ${name}: {
-          args: [${parameters}],
-          returns: ${f.result.nativeType}
-        }
+        attach_function :${name}, %i[${parameters}], :${f.result.nativeType}
       `;
-  }).join(",\n");
+  }).join("\n");
 
   return m`
     export const ${ctx.name}_SYMBOLS = {
