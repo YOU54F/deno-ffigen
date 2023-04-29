@@ -500,121 +500,151 @@ export namespace PactFfi {
   /** /data/input/pact.h#L47 */
   export type ExpressionValueType = PactFfi.ExpressionValueType;
 
-  /** /data/input/pact.h#L61 */
+  /** /data/input/pact.h#L81 */
+  export type GeneratorCategory = PactFfi.GeneratorCategory;
+
+  /** /data/input/pact.h#L95 */
   export type InteractionPart = PactFfi.InteractionPart;
 
-  /** /data/input/pact.h#L76 */
+  /** /data/input/pact.h#L110 */
   export type LevelFilter = PactFfi.LevelFilter;
 
-  /** /data/input/pact.h#L106 */
+  /** /data/input/pact.h#L148 */
+  export type MatchingRuleCategory = PactFfi.MatchingRuleCategory;
+
+  /** /data/input/pact.h#L178 */
   export type PactSpecification = PactFfi.PactSpecification;
 
-  /** /data/input/pact.h#L111 */
+  /** /data/input/pact.h#L183 */
+  export type AsynchronousMessage = StructPointer<"AsynchronousMessage">;
+
+  /** /data/input/pact.h#L188 */
   export type Consumer = StructPointer<"Consumer">;
 
-  /** /data/input/pact.h#L116 */
+  /** /data/input/pact.h#L193 */
   export type Generator = StructPointer<"Generator">;
 
-  /** /data/input/pact.h#L121 */
-  export type MatchingRule = StructPointer<"MatchingRule">;
-
-  /** /data/input/pact.h#L126 */
-  export type MatchingRuleDefinitionResult = StructPointer<"MatchingRuleDefinitionResult">;
-
-  /** /data/input/pact.h#L131 */
-  export type MatchingRuleIterator = StructPointer<"MatchingRuleIterator">;
-
-  /** /data/input/pact.h#L136 */
-  export type Message = StructPointer<"Message">;
-
-  /** /data/input/pact.h#L144 */
-  export type MessageMetadataIterator = StructPointer<"MessageMetadataIterator">;
-
-  /** /data/input/pact.h#L151 */
-  export type MessagePact = StructPointer<"MessagePact">;
-
-  /** /data/input/pact.h#L156 */
-  export type MessagePactMessageIterator = StructPointer<"MessagePactMessageIterator">;
-
-  /** /data/input/pact.h#L164 */
-  export type MessagePactMetadataIterator = StructPointer<"MessagePactMetadataIterator">;
-
-  /** /data/input/pact.h#L169 */
-  export type Mismatch = StructPointer<"Mismatch">;
-
-  /** /data/input/pact.h#L174 */
-  export type Mismatches = StructPointer<"Mismatches">;
-
-  /** /data/input/pact.h#L179 */
-  export type MismatchesIterator = StructPointer<"MismatchesIterator">;
-
-  /** /data/input/pact.h#L184 */
-  export type Pact = StructPointer<"Pact">;
-
-  /** /data/input/pact.h#L189 */
-  export type PactMessageIterator = StructPointer<"PactMessageIterator">;
-
-  /** /data/input/pact.h#L194 */
-  export type PactSyncHttpIterator = StructPointer<"PactSyncHttpIterator">;
-
   /** /data/input/pact.h#L199 */
-  export type PactSyncMessageIterator = StructPointer<"PactSyncMessageIterator">;
+  export type GeneratorCategoryIterator = StructPointer<"GeneratorCategoryIterator">;
 
   /** /data/input/pact.h#L204 */
-  export type Provider = StructPointer<"Provider">;
+  export type HttpRequest = StructPointer<"HttpRequest">;
 
   /** /data/input/pact.h#L209 */
-  export type ProviderState = StructPointer<"ProviderState">;
+  export type HttpResponse = StructPointer<"HttpResponse">;
 
   /** /data/input/pact.h#L214 */
-  export type ProviderStateIterator = StructPointer<"ProviderStateIterator">;
+  export type MatchingRule = StructPointer<"MatchingRule">;
 
-  /** /data/input/pact.h#L222 */
-  export type ProviderStateParamIterator = StructPointer<"ProviderStateParamIterator">;
+  /** /data/input/pact.h#L220 */
+  export type MatchingRuleCategoryIterator = StructPointer<"MatchingRuleCategoryIterator">;
 
-  /** /data/input/pact.h#L227 */
-  export type SynchronousHttp = StructPointer<"SynchronousHttp">;
+  /** /data/input/pact.h#L225 */
+  export type MatchingRuleDefinitionResult = StructPointer<"MatchingRuleDefinitionResult">;
 
-  /** /data/input/pact.h#L232 */
-  export type SynchronousMessage = StructPointer<"SynchronousMessage">;
+  /** /data/input/pact.h#L230 */
+  export type MatchingRuleIterator = StructPointer<"MatchingRuleIterator">;
 
-  /** /data/input/pact.h#L237 */
-  export type VerifierHandle = StructPointer<"VerifierHandle">;
-
-  /** /data/input/pact.h#L251 */
-  export type MessageMetadataPair = StructPointer<"MessageMetadataPair">;
-
-  /** /data/input/pact.h#L269 */
-  export type MessagePactMetadataTriple = StructPointer<"MessagePactMetadataTriple">;
-
-  /** /data/input/pact.h#L283 */
-  export type ProviderStateParamPair = StructPointer<"ProviderStateParamPair">;
-
-  /** /data/input/pact.h#L324 */
-  export type MatchingRuleResult_Tag = PactFfi.MatchingRuleResult_Tag;
-
-  /** /data/input/pact.h#L330 */
-  export type MatchingRuleResult_MatchingRule_Body = StructPointer<"MatchingRuleResult_MatchingRule_Body">;
-
-  /** /data/input/pact.h#L340 */
+  /** /data/input/pact.h#L262 */
   export type MatchingRuleResult = StructPointer<"MatchingRuleResult">;
 
+  /** /data/input/pact.h#L267 */
+  export type Message = StructPointer<"Message">;
+
+  /** /data/input/pact.h#L272 */
+  export type MessageContents = StructPointer<"MessageContents">;
+
+  /** /data/input/pact.h#L280 */
+  export type MessageMetadataIterator = StructPointer<"MessageMetadataIterator">;
+
+  /** /data/input/pact.h#L287 */
+  export type MessagePact = StructPointer<"MessagePact">;
+
+  /** /data/input/pact.h#L292 */
+  export type MessagePactMessageIterator = StructPointer<"MessagePactMessageIterator">;
+
+  /** /data/input/pact.h#L300 */
+  export type MessagePactMetadataIterator = StructPointer<"MessagePactMetadataIterator">;
+
+  /** /data/input/pact.h#L305 */
+  export type Mismatch = StructPointer<"Mismatch">;
+
+  /** /data/input/pact.h#L310 */
+  export type Mismatches = StructPointer<"Mismatches">;
+
+  /** /data/input/pact.h#L315 */
+  export type MismatchesIterator = StructPointer<"MismatchesIterator">;
+
+  /** /data/input/pact.h#L320 */
+  export type Pact = StructPointer<"Pact">;
+
+  /** /data/input/pact.h#L325 */
+  export type PactInteraction = StructPointer<"PactInteraction">;
+
+  /** /data/input/pact.h#L330 */
+  export type PactInteractionIterator = StructPointer<"PactInteractionIterator">;
+
+  /** /data/input/pact.h#L335 */
+  export type PactMessageIterator = StructPointer<"PactMessageIterator">;
+
+  /** /data/input/pact.h#L340 */
+  export type PactSyncHttpIterator = StructPointer<"PactSyncHttpIterator">;
+
   /** /data/input/pact.h#L345 */
+  export type PactSyncMessageIterator = StructPointer<"PactSyncMessageIterator">;
+
+  /** /data/input/pact.h#L350 */
+  export type Provider = StructPointer<"Provider">;
+
+  /** /data/input/pact.h#L355 */
+  export type ProviderState = StructPointer<"ProviderState">;
+
+  /** /data/input/pact.h#L360 */
+  export type ProviderStateIterator = StructPointer<"ProviderStateIterator">;
+
+  /** /data/input/pact.h#L368 */
+  export type ProviderStateParamIterator = StructPointer<"ProviderStateParamIterator">;
+
+  /** /data/input/pact.h#L373 */
+  export type SynchronousHttp = StructPointer<"SynchronousHttp">;
+
+  /** /data/input/pact.h#L378 */
+  export type SynchronousMessage = StructPointer<"SynchronousMessage">;
+
+  /** /data/input/pact.h#L383 */
+  export type VerifierHandle = StructPointer<"VerifierHandle">;
+
+  /** /data/input/pact.h#L397 */
+  export type GeneratorKeyValuePair = StructPointer<"GeneratorKeyValuePair">;
+
+  /** /data/input/pact.h#L411 */
+  export type MatchingRuleKeyValuePair = StructPointer<"MatchingRuleKeyValuePair">;
+
+  /** /data/input/pact.h#L425 */
+  export type MessageMetadataPair = StructPointer<"MessageMetadataPair">;
+
+  /** /data/input/pact.h#L443 */
+  export type MessagePactMetadataTriple = StructPointer<"MessagePactMetadataTriple">;
+
+  /** /data/input/pact.h#L457 */
+  export type ProviderStateParamPair = StructPointer<"ProviderStateParamPair">;
+
+  /** /data/input/pact.h#L462 */
   export type PactHandle = PactFfi.uint16_t;
 
-  /** /data/input/pact.h#L359 */
+  /** /data/input/pact.h#L476 */
   export type StringResult_Tag = PactFfi.StringResult_Tag;
 
-  /** /data/input/pact.h#L371 */
+  /** /data/input/pact.h#L488 */
   export type StringResult = StructPointer<"StringResult">;
 
-  /** /data/input/pact.h#L376 */
+  /** /data/input/pact.h#L493 */
   export type InteractionHandle = PactFfi.uint32_t;
 
-  /** /data/input/pact.h#L381 */
+  /** /data/input/pact.h#L498 */
   export type MessagePactHandle = PactFfi.uint16_t;
 
-  /** /data/input/pact.h#L386 */
+  /** /data/input/pact.h#L503 */
   export type MessageHandle = PactFfi.uint32_t;
 
   /** /data/input/pact.h#L22 */
@@ -628,12 +658,23 @@ export namespace PactFfi {
   }
 
   /** /data/input/pact.h#L52 */
+  export enum GeneratorCategory {
+    GeneratorCategory_METHOD = 0,
+    GeneratorCategory_PATH = 1,
+    GeneratorCategory_HEADER = 2,
+    GeneratorCategory_QUERY = 3,
+    GeneratorCategory_BODY = 4,
+    GeneratorCategory_STATUS = 5,
+    GeneratorCategory_METADATA = 6,
+  }
+
+  /** /data/input/pact.h#L86 */
   export enum InteractionPart {
     InteractionPart_Request = 0,
     InteractionPart_Response = 1,
   }
 
-  /** /data/input/pact.h#L69 */
+  /** /data/input/pact.h#L103 */
   export enum LevelFilter {
     LevelFilter_Off = 0,
     LevelFilter_Error = 1,
@@ -643,7 +684,19 @@ export namespace PactFfi {
     LevelFilter_Trace = 5,
   }
 
-  /** /data/input/pact.h#L81 */
+  /** /data/input/pact.h#L115 */
+  export enum MatchingRuleCategory {
+    MatchingRuleCategory_METHOD = 0,
+    MatchingRuleCategory_PATH = 1,
+    MatchingRuleCategory_HEADER = 2,
+    MatchingRuleCategory_QUERY = 3,
+    MatchingRuleCategory_BODY = 4,
+    MatchingRuleCategory_STATUS = 5,
+    MatchingRuleCategory_CONTENTS = 6,
+    MatchingRuleCategory_METADATA = 7,
+  }
+
+  /** /data/input/pact.h#L153 */
   export enum PactSpecification {
     PactSpecification_Unknown = 0,
     PactSpecification_V1 = 1,
@@ -653,13 +706,7 @@ export namespace PactFfi {
     PactSpecification_V4 = 5,
   }
 
-  /** /data/input/pact.h#L315 */
-  export enum MatchingRuleResult_Tag {
-    MatchingRuleResult_MatchingRule = 0,
-    MatchingRuleResult_MatchingReference = 1,
-  }
-
-  /** /data/input/pact.h#L350 */
+  /** /data/input/pact.h#L467 */
   export enum StringResult_Tag {
     StringResult_Ok = 0,
     StringResult_Failed = 1,
@@ -689,596 +736,773 @@ export namespace PactFfi {
   /** .stdlib.h#L808 */
   export declare function realpath(__name: FFIType.cstring, __resolved: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L391 */
+  /** /data/input/pact.h#L508 */
   export declare function pactffi_version(): FFIType.cstring;
 
-  /** /data/input/pact.h#L402 */
+  /** /data/input/pact.h#L519 */
   export declare function pactffi_init(log_env_var: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L412 */
+  /** /data/input/pact.h#L529 */
   export declare function pactffi_init_with_log_level(level: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L421 */
+  /** /data/input/pact.h#L538 */
   export declare function pactffi_enable_ansi_support(): FFIType.void;
 
-  /** /data/input/pact.h#L436 */
+  /** /data/input/pact.h#L553 */
   export declare function pactffi_log_message(source: FFIType.cstring, log_level: FFIType.cstring, message: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L442 */
+  /** /data/input/pact.h#L559 */
   export declare function pactffi_match_message(msg_1: Pointer<StructPointer<"Message">>, msg_2: Pointer<StructPointer<"Message">>): Pointer<StructPointer<"Mismatches">>;
 
-  /** /data/input/pact.h#L448 */
+  /** /data/input/pact.h#L565 */
   export declare function pactffi_mismatches_get_iter(mismatches: Pointer<StructPointer<"Mismatches">>): Pointer<StructPointer<"MismatchesIterator">>;
 
-  /** /data/input/pact.h#L453 */
+  /** /data/input/pact.h#L570 */
   export declare function pactffi_mismatches_delete(mismatches: Pointer<StructPointer<"Mismatches">>): FFIType.void;
 
-  /** /data/input/pact.h#L460 */
+  /** /data/input/pact.h#L577 */
   export declare function pactffi_mismatches_iter_next(iter: Pointer<StructPointer<"MismatchesIterator">>): Pointer<StructPointer<"Mismatch">>;
 
-  /** /data/input/pact.h#L465 */
+  /** /data/input/pact.h#L582 */
   export declare function pactffi_mismatches_iter_delete(iter: Pointer<StructPointer<"MismatchesIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L470 */
+  /** /data/input/pact.h#L587 */
   export declare function pactffi_mismatch_to_json(mismatch: Pointer<StructPointer<"Mismatch">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L475 */
+  /** /data/input/pact.h#L592 */
   export declare function pactffi_mismatch_type(mismatch: Pointer<StructPointer<"Mismatch">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L480 */
+  /** /data/input/pact.h#L597 */
   export declare function pactffi_mismatch_summary(mismatch: Pointer<StructPointer<"Mismatch">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L485 */
+  /** /data/input/pact.h#L602 */
   export declare function pactffi_mismatch_description(mismatch: Pointer<StructPointer<"Mismatch">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L490 */
+  /** /data/input/pact.h#L607 */
   export declare function pactffi_mismatch_ansi_description(mismatch: Pointer<StructPointer<"Mismatch">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L529 */
+  /** /data/input/pact.h#L646 */
   export declare function pactffi_get_error_message(buffer: FFIType.cstring, length: FFIType.i32): FFIType.i32;
 
-  /** /data/input/pact.h#L535 */
+  /** /data/input/pact.h#L652 */
   export declare function pactffi_log_to_stdout(level_filter: PactFfi.LevelFilter): FFIType.i32;
 
-  /** /data/input/pact.h#L540 */
+  /** /data/input/pact.h#L657 */
   export declare function pactffi_log_to_stderr(level_filter: PactFfi.LevelFilter): FFIType.i32;
 
-  /** /data/input/pact.h#L549 */
+  /** /data/input/pact.h#L666 */
   export declare function pactffi_log_to_file(file_name: FFIType.cstring, level_filter: PactFfi.LevelFilter): FFIType.i32;
 
-  /** /data/input/pact.h#L554 */
+  /** /data/input/pact.h#L671 */
   export declare function pactffi_log_to_buffer(level_filter: PactFfi.LevelFilter): FFIType.i32;
 
-  /** /data/input/pact.h#L571 */
+  /** /data/input/pact.h#L688 */
   export declare function pactffi_logger_init(): FFIType.void;
 
-  /** /data/input/pact.h#L608 */
+  /** /data/input/pact.h#L725 */
   export declare function pactffi_logger_attach_sink(sink_specifier: FFIType.cstring, level_filter: PactFfi.LevelFilter): FFIType.i32;
 
-  /** /data/input/pact.h#L618 */
+  /** /data/input/pact.h#L735 */
   export declare function pactffi_logger_apply(): FFIType.i32;
 
-  /** /data/input/pact.h#L636 */
+  /** /data/input/pact.h#L753 */
   export declare function pactffi_fetch_log_buffer(log_id: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L646 */
+  /** /data/input/pact.h#L763 */
   export declare function pactffi_parse_pact_json(json: FFIType.cstring): Pointer<StructPointer<"Pact">>;
 
-  /** /data/input/pact.h#L651 */
+  /** /data/input/pact.h#L768 */
   export declare function pactffi_pact_model_delete(pact: Pointer<StructPointer<"Pact">>): FFIType.void;
 
-  /** /data/input/pact.h#L689 */
+  /** /data/input/pact.h#L782 */
+  export declare function pactffi_pact_model_interaction_iterator(pact: Pointer<StructPointer<"Pact">>): Pointer<StructPointer<"PactInteractionIterator">>;
+
+  /** /data/input/pact.h#L787 */
+  export declare function pactffi_pact_spec_version(pact: Pointer<StructPointer<"Pact">>): PactFfi.PactSpecification;
+
+  /** /data/input/pact.h#L792 */
+  export declare function pactffi_pact_interaction_delete(interaction: Pointer<StructPointer<"PactInteraction">>): FFIType.void;
+
+  /** /data/input/pact.h#L805 */
+  export declare function pactffi_async_message_new(): Pointer<StructPointer<"AsynchronousMessage">>;
+
+  /** /data/input/pact.h#L810 */
+  export declare function pactffi_async_message_delete(message: Pointer<StructPointer<"AsynchronousMessage">>): FFIType.void;
+
+  /** /data/input/pact.h#L824 */
+  export declare function pactffi_async_message_get_contents(message: Pointer<StructPointer<"AsynchronousMessage">>): Pointer<StructPointer<"MessageContents">>;
+
+  /** /data/input/pact.h#L842 */
+  export declare function pactffi_async_message_get_contents_str(message: Pointer<StructPointer<"AsynchronousMessage">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L861 */
+  export declare function pactffi_async_message_set_contents_str(message: Pointer<StructPointer<"AsynchronousMessage">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L877 */
+  export declare function pactffi_async_message_get_contents_length(message: Pointer<StructPointer<"AsynchronousMessage">>): FFIType.usize;
+
+  /** /data/input/pact.h#L893 */
+  export declare function pactffi_async_message_get_contents_bin(message: Pointer<StructPointer<"AsynchronousMessage">>): Pointer<FFIType.u8>;
+
+  /** /data/input/pact.h#L913 */
+  export declare function pactffi_async_message_set_contents_bin(message: Pointer<StructPointer<"AsynchronousMessage">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L934 */
+  export declare function pactffi_async_message_get_description(message: Pointer<StructPointer<"AsynchronousMessage">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L951 */
+  export declare function pactffi_async_message_set_description(message: Pointer<StructPointer<"AsynchronousMessage">>, description: FFIType.cstring): FFIType.i32;
+
+  /** /data/input/pact.h#L970 */
+  export declare function pactffi_async_message_get_provider_state(message: Pointer<StructPointer<"AsynchronousMessage">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
+
+  /** /data/input/pact.h#L984 */
+  export declare function pactffi_async_message_get_provider_state_iter(message: Pointer<StructPointer<"AsynchronousMessage">>): Pointer<StructPointer<"ProviderStateIterator">>;
+
+  /** /data/input/pact.h#L1022 */
   export declare function pactffi_consumer_get_name(consumer: Pointer<StructPointer<"Consumer">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L702 */
-  export declare function pactffi_message_new(): Pointer<StructPointer<"Message">>;
+  /** /data/input/pact.h#L1033 */
+  export declare function pactffi_pact_get_consumer(pact: Pointer<StructPointer<"Pact">>): Pointer<StructPointer<"Consumer">>;
 
-  /** /data/input/pact.h#L715 */
-  export declare function pactffi_message_new_from_json(index: FFIType.u32, json_str: FFIType.cstring, spec_version: PactFfi.PactSpecification): Pointer<StructPointer<"Message">>;
+  /** /data/input/pact.h#L1038 */
+  export declare function pactffi_pact_consumer_delete(consumer: Pointer<StructPointer<"Consumer">>): FFIType.void;
 
-  /** /data/input/pact.h#L730 */
-  export declare function pactffi_message_new_from_body(body: FFIType.cstring, content_type: FFIType.cstring): Pointer<StructPointer<"Message">>;
-
-  /** /data/input/pact.h#L735 */
-  export declare function pactffi_message_delete(message: Pointer<StructPointer<"Message">>): FFIType.void;
-
-  /** /data/input/pact.h#L753 */
-  export declare function pactffi_message_get_contents(message: Pointer<StructPointer<"Message">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L768 */
-  export declare function pactffi_message_set_contents(message: Pointer<StructPointer<"Message">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L784 */
-  export declare function pactffi_message_get_contents_length(message: Pointer<StructPointer<"Message">>): FFIType.usize;
-
-  /** /data/input/pact.h#L800 */
-  export declare function pactffi_message_get_contents_bin(message: Pointer<StructPointer<"Message">>): Pointer<FFIType.u8>;
-
-  /** /data/input/pact.h#L815 */
-  export declare function pactffi_message_set_contents_bin(message: Pointer<StructPointer<"Message">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L837 */
-  export declare function pactffi_message_get_description(message: Pointer<StructPointer<"Message">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L854 */
-  export declare function pactffi_message_set_description(message: Pointer<StructPointer<"Message">>, description: FFIType.cstring): FFIType.i32;
-
-  /** /data/input/pact.h#L873 */
-  export declare function pactffi_message_get_provider_state(message: Pointer<StructPointer<"Message">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
-
-  /** /data/input/pact.h#L887 */
-  export declare function pactffi_message_get_provider_state_iter(message: Pointer<StructPointer<"Message">>): Pointer<StructPointer<"ProviderStateIterator">>;
-
-  /** /data/input/pact.h#L903 */
-  export declare function pactffi_provider_state_iter_next(iter: Pointer<StructPointer<"ProviderStateIterator">>): Pointer<StructPointer<"ProviderState">>;
-
-  /** /data/input/pact.h#L908 */
-  export declare function pactffi_provider_state_iter_delete(iter: Pointer<StructPointer<"ProviderStateIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L931 */
-  export declare function pactffi_message_find_metadata(message: Pointer<StructPointer<"Message">>, key: FFIType.cstring): FFIType.cstring;
-
-  /** /data/input/pact.h#L947 */
-  export declare function pactffi_message_insert_metadata(message: Pointer<StructPointer<"Message">>, key: FFIType.cstring, value: FFIType.cstring): FFIType.i32;
-
-  /** /data/input/pact.h#L967 */
-  export declare function pactffi_message_get_metadata_iter(message: Pointer<StructPointer<"Message">>): Pointer<StructPointer<"MessageMetadataIterator">>;
-
-  /** /data/input/pact.h#L980 */
-  export declare function pactffi_message_metadata_iter_next(iter: Pointer<StructPointer<"MessageMetadataIterator">>): Pointer<StructPointer<"MessageMetadataPair">>;
-
-  /** /data/input/pact.h#L985 */
-  export declare function pactffi_message_metadata_iter_delete(iter: Pointer<StructPointer<"MessageMetadataIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L990 */
-  export declare function pactffi_message_metadata_pair_delete(pair: Pointer<StructPointer<"MessageMetadataPair">>): FFIType.void;
-
-  /** /data/input/pact.h#L1005 */
-  export declare function pactffi_message_pact_new_from_json(file_name: FFIType.cstring, json_str: FFIType.cstring): Pointer<StructPointer<"MessagePact">>;
-
-  /** /data/input/pact.h#L1010 */
-  export declare function pactffi_message_pact_delete(message_pact: Pointer<StructPointer<"MessagePact">>): FFIType.void;
-
-  /** /data/input/pact.h#L1026 */
-  export declare function pactffi_message_pact_get_consumer(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"Consumer">>;
-
-  /** /data/input/pact.h#L1042 */
-  export declare function pactffi_message_pact_get_provider(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"Provider">>;
-
-  /** /data/input/pact.h#L1062 */
-  export declare function pactffi_message_pact_get_message_iter(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"MessagePactMessageIterator">>;
+  /** /data/input/pact.h#L1056 */
+  export declare function pactffi_message_contents_get_contents_str(contents: Pointer<StructPointer<"MessageContents">>): FFIType.cstring;
 
   /** /data/input/pact.h#L1075 */
-  export declare function pactffi_message_pact_message_iter_next(iter: Pointer<StructPointer<"MessagePactMessageIterator">>): Pointer<StructPointer<"Message">>;
+  export declare function pactffi_message_contents_set_contents_str(contents: Pointer<StructPointer<"MessageContents">>, contents_str: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L1080 */
-  export declare function pactffi_message_pact_message_iter_delete(iter: Pointer<StructPointer<"MessagePactMessageIterator">>): FFIType.void;
+  /** /data/input/pact.h#L1091 */
+  export declare function pactffi_message_contents_get_contents_length(contents: Pointer<StructPointer<"MessageContents">>): FFIType.usize;
 
-  /** /data/input/pact.h#L1103 */
-  export declare function pactffi_message_pact_find_metadata(message_pact: Pointer<StructPointer<"MessagePact">>, key1: FFIType.cstring, key2: FFIType.cstring): FFIType.cstring;
+  /** /data/input/pact.h#L1107 */
+  export declare function pactffi_message_contents_get_contents_bin(contents: Pointer<StructPointer<"MessageContents">>): Pointer<FFIType.u8>;
 
-  /** /data/input/pact.h#L1125 */
-  export declare function pactffi_message_pact_get_metadata_iter(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"MessagePactMetadataIterator">>;
+  /** /data/input/pact.h#L1127 */
+  export declare function pactffi_message_contents_set_contents_bin(contents: Pointer<StructPointer<"MessageContents">>, contents_bin: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L1138 */
-  export declare function pactffi_message_pact_metadata_iter_next(iter: Pointer<StructPointer<"MessagePactMetadataIterator">>): Pointer<StructPointer<"MessagePactMetadataTriple">>;
+  /** /data/input/pact.h#L1153 */
+  export declare function pactffi_message_contents_get_metadata_iter(contents: Pointer<StructPointer<"MessageContents">>): Pointer<StructPointer<"MessageMetadataIterator">>;
 
-  /** /data/input/pact.h#L1143 */
-  export declare function pactffi_message_pact_metadata_iter_delete(iter: Pointer<StructPointer<"MessagePactMetadataIterator">>): FFIType.void;
+  /** /data/input/pact.h#L1179 */
+  export declare function pactffi_message_contents_get_matching_rule_iter(contents: Pointer<StructPointer<"MessageContents">>, category: PactFfi.MatchingRuleCategory): Pointer<StructPointer<"MatchingRuleCategoryIterator">>;
 
-  /** /data/input/pact.h#L1148 */
-  export declare function pactffi_message_pact_metadata_triple_delete(triple: Pointer<StructPointer<"MessagePactMetadataTriple">>): FFIType.void;
+  /** /data/input/pact.h#L1203 */
+  export declare function pactffi_request_contents_get_matching_rule_iter(request: Pointer<StructPointer<"HttpRequest">>, category: PactFfi.MatchingRuleCategory): Pointer<StructPointer<"MatchingRuleCategoryIterator">>;
 
-  /** /data/input/pact.h#L1186 */
-  export declare function pactffi_provider_get_name(provider: Pointer<StructPointer<"Provider">>): FFIType.cstring;
+  /** /data/input/pact.h#L1227 */
+  export declare function pactffi_response_contents_get_matching_rule_iter(response: Pointer<StructPointer<"HttpResponse">>, category: PactFfi.MatchingRuleCategory): Pointer<StructPointer<"MatchingRuleCategoryIterator">>;
 
-  /** /data/input/pact.h#L1199 */
-  export declare function pactffi_provider_state_get_name(provider_state: Pointer<StructPointer<"ProviderState">>): FFIType.cstring;
+  /** /data/input/pact.h#L1245 */
+  export declare function pactffi_message_contents_get_generators_iter(contents: Pointer<StructPointer<"MessageContents">>, category: PactFfi.GeneratorCategory): Pointer<StructPointer<"GeneratorCategoryIterator">>;
 
-  /** /data/input/pact.h#L1219 */
-  export declare function pactffi_provider_state_get_param_iter(provider_state: Pointer<StructPointer<"ProviderState">>): Pointer<StructPointer<"ProviderStateParamIterator">>;
+  /** /data/input/pact.h#L1263 */
+  export declare function pactffi_request_contents_get_generators_iter(request: Pointer<StructPointer<"HttpRequest">>, category: PactFfi.GeneratorCategory): Pointer<StructPointer<"GeneratorCategoryIterator">>;
 
-  /** /data/input/pact.h#L1237 */
-  export declare function pactffi_provider_state_param_iter_next(iter: Pointer<StructPointer<"ProviderStateParamIterator">>): Pointer<StructPointer<"ProviderStateParamPair">>;
+  /** /data/input/pact.h#L1281 */
+  export declare function pactffi_response_contents_get_generators_iter(response: Pointer<StructPointer<"HttpResponse">>, category: PactFfi.GeneratorCategory): Pointer<StructPointer<"GeneratorCategoryIterator">>;
 
-  /** /data/input/pact.h#L1242 */
-  export declare function pactffi_provider_state_delete(provider_state: Pointer<StructPointer<"ProviderState">>): FFIType.void;
-
-  /** /data/input/pact.h#L1247 */
-  export declare function pactffi_provider_state_param_iter_delete(iter: Pointer<StructPointer<"ProviderStateParamIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L1252 */
-  export declare function pactffi_provider_state_param_pair_delete(pair: Pointer<StructPointer<"ProviderStateParamPair">>): FFIType.void;
-
-  /** /data/input/pact.h#L1257 */
-  export declare function pactffi_pact_message_iter_delete(iter: Pointer<StructPointer<"PactMessageIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L1276 */
-  export declare function pactffi_pact_message_iter_next(iter: Pointer<StructPointer<"PactMessageIterator">>): Pointer<StructPointer<"Message">>;
-
-  /** /data/input/pact.h#L1295 */
-  export declare function pactffi_pact_sync_message_iter_next(iter: Pointer<StructPointer<"PactSyncMessageIterator">>): Pointer<StructPointer<"SynchronousMessage">>;
-
-  /** /data/input/pact.h#L1300 */
-  export declare function pactffi_pact_sync_message_iter_delete(iter: Pointer<StructPointer<"PactSyncMessageIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L1319 */
-  export declare function pactffi_pact_sync_http_iter_next(iter: Pointer<StructPointer<"PactSyncHttpIterator">>): Pointer<StructPointer<"SynchronousHttp">>;
-
-  /** /data/input/pact.h#L1324 */
-  export declare function pactffi_pact_sync_http_iter_delete(iter: Pointer<StructPointer<"PactSyncHttpIterator">>): FFIType.void;
-
-  /** /data/input/pact.h#L1337 */
-  export declare function pactffi_sync_message_new(): Pointer<StructPointer<"SynchronousMessage">>;
-
-  /** /data/input/pact.h#L1342 */
-  export declare function pactffi_sync_message_delete(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.void;
-
-  /** /data/input/pact.h#L1360 */
-  export declare function pactffi_sync_message_get_request_contents(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L1379 */
-  export declare function pactffi_sync_message_set_request_contents(message: Pointer<StructPointer<"SynchronousMessage">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1395 */
-  export declare function pactffi_sync_message_get_request_contents_length(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.usize;
-
-  /** /data/input/pact.h#L1411 */
-  export declare function pactffi_sync_message_get_request_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>): Pointer<FFIType.u8>;
-
-  /** /data/input/pact.h#L1431 */
-  export declare function pactffi_sync_message_set_request_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1447 */
-  export declare function pactffi_sync_message_get_number_responses(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.usize;
-
-  /** /data/input/pact.h#L1466 */
-  export declare function pactffi_sync_message_get_response_contents(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): FFIType.cstring;
-
-  /** /data/input/pact.h#L1488 */
-  export declare function pactffi_sync_message_set_response_contents(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1505 */
-  export declare function pactffi_sync_message_get_response_contents_length(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): FFIType.usize;
-
-  /** /data/input/pact.h#L1522 */
-  export declare function pactffi_sync_message_get_response_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): Pointer<FFIType.u8>;
-
-  /** /data/input/pact.h#L1546 */
-  export declare function pactffi_sync_message_set_response_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1569 */
-  export declare function pactffi_sync_message_get_description(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L1586 */
-  export declare function pactffi_sync_message_set_description(message: Pointer<StructPointer<"SynchronousMessage">>, description: FFIType.cstring): FFIType.i32;
-
-  /** /data/input/pact.h#L1606 */
-  export declare function pactffi_sync_message_get_provider_state(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
-
-  /** /data/input/pact.h#L1620 */
-  export declare function pactffi_sync_message_get_provider_state_iter(message: Pointer<StructPointer<"SynchronousMessage">>): Pointer<StructPointer<"ProviderStateIterator">>;
-
-  /** /data/input/pact.h#L1633 */
-  export declare function pactffi_sync_http_new(): Pointer<StructPointer<"SynchronousHttp">>;
-
-  /** /data/input/pact.h#L1638 */
-  export declare function pactffi_sync_http_delete(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.void;
-
-  /** /data/input/pact.h#L1656 */
-  export declare function pactffi_sync_http_get_request_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L1675 */
-  export declare function pactffi_sync_http_set_request_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1691 */
-  export declare function pactffi_sync_http_get_request_contents_length(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.usize;
-
-  /** /data/input/pact.h#L1707 */
-  export declare function pactffi_sync_http_get_request_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<FFIType.u8>;
-
-  /** /data/input/pact.h#L1727 */
-  export declare function pactffi_sync_http_set_request_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1749 */
-  export declare function pactffi_sync_http_get_response_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L1768 */
-  export declare function pactffi_sync_http_set_response_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1784 */
-  export declare function pactffi_sync_http_get_response_contents_length(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.usize;
-
-  /** /data/input/pact.h#L1800 */
-  export declare function pactffi_sync_http_get_response_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<FFIType.u8>;
-
-  /** /data/input/pact.h#L1820 */
-  export declare function pactffi_sync_http_set_response_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L1842 */
-  export declare function pactffi_sync_http_get_description(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
-
-  /** /data/input/pact.h#L1859 */
-  export declare function pactffi_sync_http_set_description(interaction: Pointer<StructPointer<"SynchronousHttp">>, description: FFIType.cstring): FFIType.i32;
-
-  /** /data/input/pact.h#L1878 */
-  export declare function pactffi_sync_http_get_provider_state(interaction: Pointer<StructPointer<"SynchronousHttp">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
-
-  /** /data/input/pact.h#L1892 */
-  export declare function pactffi_sync_http_get_provider_state_iter(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<StructPointer<"ProviderStateIterator">>;
-
-  /** /data/input/pact.h#L1915 */
+  /** /data/input/pact.h#L1305 */
   export declare function pactffi_parse_matcher_definition(expression: FFIType.cstring): Pointer<StructPointer<"MatchingRuleDefinitionResult">>;
 
-  /** /data/input/pact.h#L1922 */
+  /** /data/input/pact.h#L1312 */
   export declare function pactffi_matcher_definition_error(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L1933 */
+  /** /data/input/pact.h#L1323 */
   export declare function pactffi_matcher_definition_value(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L1938 */
+  /** /data/input/pact.h#L1328 */
   export declare function pactffi_matcher_definition_delete(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): FFIType.void;
 
-  /** /data/input/pact.h#L1949 */
+  /** /data/input/pact.h#L1339 */
   export declare function pactffi_matcher_definition_generator(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): Pointer<StructPointer<"Generator">>;
 
-  /** /data/input/pact.h#L1955 */
+  /** /data/input/pact.h#L1345 */
   export declare function pactffi_matcher_definition_value_type(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): PactFfi.ExpressionValueType;
 
-  /** /data/input/pact.h#L1960 */
+  /** /data/input/pact.h#L1350 */
   export declare function pactffi_matching_rule_iter_delete(iter: Pointer<StructPointer<"MatchingRuleIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L1968 */
+  /** /data/input/pact.h#L1358 */
   export declare function pactffi_matcher_definition_iter(definition: Pointer<StructPointer<"MatchingRuleDefinitionResult">>): Pointer<StructPointer<"MatchingRuleIterator">>;
 
-  /** /data/input/pact.h#L1985 */
+  /** /data/input/pact.h#L1375 */
   export declare function pactffi_matching_rule_iter_next(iter: Pointer<StructPointer<"MatchingRuleIterator">>): Pointer<StructPointer<"MatchingRuleResult">>;
 
-  /** /data/input/pact.h#L1997 */
-  export declare function pactffi_matching_rule_to_json(rule: Pointer<StructPointer<"MatchingRule">>): FFIType.cstring;
+  /** /data/input/pact.h#L1412 */
+  export declare function pactffi_matching_rule_id(rule_result: Pointer<StructPointer<"MatchingRuleResult">>): PactFfi.uint16_t;
 
-  /** /data/input/pact.h#L2009 */
+  /** /data/input/pact.h#L1453 */
+  export declare function pactffi_matching_rule_value(rule_result: Pointer<StructPointer<"MatchingRuleResult">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L1464 */
+  export declare function pactffi_matching_rule_pointer(rule_result: Pointer<StructPointer<"MatchingRuleResult">>): Pointer<StructPointer<"MatchingRule">>;
+
+  /** /data/input/pact.h#L1487 */
+  export declare function pactffi_matching_rule_reference_name(rule_result: Pointer<StructPointer<"MatchingRuleResult">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L1504 */
+  export declare function pactffi_validate_datetime(value: FFIType.cstring, format: FFIType.cstring): FFIType.i32;
+
+  /** /data/input/pact.h#L1516 */
   export declare function pactffi_generator_to_json(generator: Pointer<StructPointer<"Generator">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L2019 */
+  /** /data/input/pact.h#L1526 */
   export declare function pactffi_generator_generate_string(generator: Pointer<StructPointer<"Generator">>, context_json: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L2030 */
+  /** /data/input/pact.h#L1537 */
   export declare function pactffi_generator_generate_integer(generator: Pointer<StructPointer<"Generator">>, context_json: FFIType.cstring): FFIType.u16;
 
-  /** /data/input/pact.h#L2043 */
-  export declare function pactffi_string_delete(string: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L1543 */
+  export declare function pactffi_generators_iter_delete(iter: Pointer<StructPointer<"GeneratorCategoryIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L2070 */
-  export declare function pactffi_create_mock_server(pact_str: FFIType.cstring, addr_str: FFIType.cstring, tls: FFIType.bool): PactFfi.int32_t;
+  /** /data/input/pact.h#L1558 */
+  export declare function pactffi_generators_iter_next(iter: Pointer<StructPointer<"GeneratorCategoryIterator">>): Pointer<StructPointer<"GeneratorKeyValuePair">>;
+
+  /** /data/input/pact.h#L1563 */
+  export declare function pactffi_generators_iter_pair_delete(pair: Pointer<StructPointer<"GeneratorKeyValuePair">>): FFIType.void;
+
+  /** /data/input/pact.h#L1576 */
+  export declare function pactffi_sync_http_new(): Pointer<StructPointer<"SynchronousHttp">>;
+
+  /** /data/input/pact.h#L1581 */
+  export declare function pactffi_sync_http_delete(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.void;
+
+  /** /data/input/pact.h#L1595 */
+  export declare function pactffi_sync_http_get_request(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<StructPointer<"HttpRequest">>;
+
+  /** /data/input/pact.h#L1613 */
+  export declare function pactffi_sync_http_get_request_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L1632 */
+  export declare function pactffi_sync_http_set_request_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L1648 */
+  export declare function pactffi_sync_http_get_request_contents_length(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.usize;
+
+  /** /data/input/pact.h#L1664 */
+  export declare function pactffi_sync_http_get_request_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<FFIType.u8>;
+
+  /** /data/input/pact.h#L1684 */
+  export declare function pactffi_sync_http_set_request_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L1701 */
+  export declare function pactffi_sync_http_get_response(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<StructPointer<"HttpResponse">>;
+
+  /** /data/input/pact.h#L1720 */
+  export declare function pactffi_sync_http_get_response_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L1739 */
+  export declare function pactffi_sync_http_set_response_contents(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L1755 */
+  export declare function pactffi_sync_http_get_response_contents_length(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.usize;
+
+  /** /data/input/pact.h#L1771 */
+  export declare function pactffi_sync_http_get_response_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<FFIType.u8>;
+
+  /** /data/input/pact.h#L1791 */
+  export declare function pactffi_sync_http_set_response_contents_bin(interaction: Pointer<StructPointer<"SynchronousHttp">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L1813 */
+  export declare function pactffi_sync_http_get_description(interaction: Pointer<StructPointer<"SynchronousHttp">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L1830 */
+  export declare function pactffi_sync_http_set_description(interaction: Pointer<StructPointer<"SynchronousHttp">>, description: FFIType.cstring): FFIType.i32;
+
+  /** /data/input/pact.h#L1849 */
+  export declare function pactffi_sync_http_get_provider_state(interaction: Pointer<StructPointer<"SynchronousHttp">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
+
+  /** /data/input/pact.h#L1863 */
+  export declare function pactffi_sync_http_get_provider_state_iter(interaction: Pointer<StructPointer<"SynchronousHttp">>): Pointer<StructPointer<"ProviderStateIterator">>;
+
+  /** /data/input/pact.h#L1877 */
+  export declare function pactffi_pact_interaction_as_synchronous_http(interaction: Pointer<StructPointer<"PactInteraction">>): Pointer<StructPointer<"SynchronousHttp">>;
+
+  /** /data/input/pact.h#L1894 */
+  export declare function pactffi_pact_interaction_as_message(interaction: Pointer<StructPointer<"PactInteraction">>): Pointer<StructPointer<"Message">>;
+
+  /** /data/input/pact.h#L1911 */
+  export declare function pactffi_pact_interaction_as_asynchronous_message(interaction: Pointer<StructPointer<"PactInteraction">>): Pointer<StructPointer<"AsynchronousMessage">>;
+
+  /** /data/input/pact.h#L1925 */
+  export declare function pactffi_pact_interaction_as_synchronous_message(interaction: Pointer<StructPointer<"PactInteraction">>): Pointer<StructPointer<"SynchronousMessage">>;
+
+  /** /data/input/pact.h#L1930 */
+  export declare function pactffi_pact_message_iter_delete(iter: Pointer<StructPointer<"PactMessageIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L1949 */
+  export declare function pactffi_pact_message_iter_next(iter: Pointer<StructPointer<"PactMessageIterator">>): Pointer<StructPointer<"Message">>;
+
+  /** /data/input/pact.h#L1968 */
+  export declare function pactffi_pact_sync_message_iter_next(iter: Pointer<StructPointer<"PactSyncMessageIterator">>): Pointer<StructPointer<"SynchronousMessage">>;
+
+  /** /data/input/pact.h#L1973 */
+  export declare function pactffi_pact_sync_message_iter_delete(iter: Pointer<StructPointer<"PactSyncMessageIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L1992 */
+  export declare function pactffi_pact_sync_http_iter_next(iter: Pointer<StructPointer<"PactSyncHttpIterator">>): Pointer<StructPointer<"SynchronousHttp">>;
+
+  /** /data/input/pact.h#L1997 */
+  export declare function pactffi_pact_sync_http_iter_delete(iter: Pointer<StructPointer<"PactSyncHttpIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L2016 */
+  export declare function pactffi_pact_interaction_iter_next(iter: Pointer<StructPointer<"PactInteractionIterator">>): Pointer<StructPointer<"PactInteraction">>;
+
+  /** /data/input/pact.h#L2021 */
+  export declare function pactffi_pact_interaction_iter_delete(iter: Pointer<StructPointer<"PactInteractionIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L2033 */
+  export declare function pactffi_matching_rule_to_json(rule: Pointer<StructPointer<"MatchingRule">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L2038 */
+  export declare function pactffi_matching_rules_iter_delete(iter: Pointer<StructPointer<"MatchingRuleCategoryIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L2053 */
+  export declare function pactffi_matching_rules_iter_next(iter: Pointer<StructPointer<"MatchingRuleCategoryIterator">>): Pointer<StructPointer<"MatchingRuleKeyValuePair">>;
+
+  /** /data/input/pact.h#L2058 */
+  export declare function pactffi_matching_rules_iter_pair_delete(pair: Pointer<StructPointer<"MatchingRuleKeyValuePair">>): FFIType.void;
+
+  /** /data/input/pact.h#L2071 */
+  export declare function pactffi_message_new(): Pointer<StructPointer<"Message">>;
 
   /** /data/input/pact.h#L2084 */
-  export declare function pactffi_get_tls_ca_certificate(): FFIType.cstring;
+  export declare function pactffi_message_new_from_json(index: FFIType.u32, json_str: FFIType.cstring, spec_version: PactFfi.PactSpecification): Pointer<StructPointer<"Message">>;
 
-  /** /data/input/pact.h#L2110 */
-  export declare function pactffi_create_mock_server_for_pact(pact: PactFfi.PactHandle, addr_str: FFIType.cstring, tls: FFIType.bool): PactFfi.int32_t;
+  /** /data/input/pact.h#L2099 */
+  export declare function pactffi_message_new_from_body(body: FFIType.cstring, content_type: FFIType.cstring): Pointer<StructPointer<"Message">>;
 
-  /** /data/input/pact.h#L2146 */
-  export declare function pactffi_create_mock_server_for_transport(pact: PactFfi.PactHandle, addr: FFIType.cstring, port: PactFfi.uint16_t, transport: FFIType.cstring, transport_config: FFIType.cstring): PactFfi.int32_t;
+  /** /data/input/pact.h#L2104 */
+  export declare function pactffi_message_delete(message: Pointer<StructPointer<"Message">>): FFIType.void;
 
-  /** /data/input/pact.h#L2158 */
-  export declare function pactffi_mock_server_matched(mock_server_port: PactFfi.int32_t): FFIType.bool;
+  /** /data/input/pact.h#L2122 */
+  export declare function pactffi_message_get_contents(message: Pointer<StructPointer<"Message">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L2175 */
-  export declare function pactffi_mock_server_mismatches(mock_server_port: PactFfi.int32_t): FFIType.cstring;
+  /** /data/input/pact.h#L2137 */
+  export declare function pactffi_message_set_contents(message: Pointer<StructPointer<"Message">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2182 */
-  export declare function pactffi_cleanup_mock_server(mock_server_port: PactFfi.int32_t): FFIType.bool;
+  /** /data/input/pact.h#L2153 */
+  export declare function pactffi_message_get_contents_length(message: Pointer<StructPointer<"Message">>): FFIType.usize;
 
-  /** /data/input/pact.h#L2205 */
-  export declare function pactffi_write_pact_file(mock_server_port: PactFfi.int32_t, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
+  /** /data/input/pact.h#L2169 */
+  export declare function pactffi_message_get_contents_bin(message: Pointer<StructPointer<"Message">>): Pointer<FFIType.u8>;
 
-  /** /data/input/pact.h#L2214 */
-  export declare function pactffi_mock_server_logs(mock_server_port: PactFfi.int32_t): FFIType.cstring;
+  /** /data/input/pact.h#L2184 */
+  export declare function pactffi_message_set_contents_bin(message: Pointer<StructPointer<"Message">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2226 */
-  export declare function pactffi_generate_datetime_string(format: FFIType.cstring): StructPointer<"StringResult">;
+  /** /data/input/pact.h#L2206 */
+  export declare function pactffi_message_get_description(message: Pointer<StructPointer<"Message">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L2236 */
-  export declare function pactffi_check_regex(regex: FFIType.cstring, example: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2223 */
+  export declare function pactffi_message_set_description(message: Pointer<StructPointer<"Message">>, description: FFIType.cstring): FFIType.i32;
 
-  /** /data/input/pact.h#L2247 */
-  export declare function pactffi_generate_regex_value(regex: FFIType.cstring): StructPointer<"StringResult">;
+  /** /data/input/pact.h#L2242 */
+  export declare function pactffi_message_get_provider_state(message: Pointer<StructPointer<"Message">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
 
-  /** /data/input/pact.h#L2259 */
-  export declare function pactffi_free_string(s: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2256 */
+  export declare function pactffi_message_get_provider_state_iter(message: Pointer<StructPointer<"Message">>): Pointer<StructPointer<"ProviderStateIterator">>;
 
-  /** /data/input/pact.h#L2270 */
-  export declare function pactffi_new_pact(consumer_name: FFIType.cstring, provider_name: FFIType.cstring): PactFfi.PactHandle;
+  /** /data/input/pact.h#L2272 */
+  export declare function pactffi_provider_state_iter_next(iter: Pointer<StructPointer<"ProviderStateIterator">>): Pointer<StructPointer<"ProviderState">>;
 
-  /** /data/input/pact.h#L2279 */
-  export declare function pactffi_new_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
+  /** /data/input/pact.h#L2277 */
+  export declare function pactffi_provider_state_iter_delete(iter: Pointer<StructPointer<"ProviderStateIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L2287 */
-  export declare function pactffi_new_message_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
+  /** /data/input/pact.h#L2300 */
+  export declare function pactffi_message_find_metadata(message: Pointer<StructPointer<"Message">>, key: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L2295 */
-  export declare function pactffi_new_sync_message_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
+  /** /data/input/pact.h#L2316 */
+  export declare function pactffi_message_insert_metadata(message: Pointer<StructPointer<"Message">>, key: FFIType.cstring, value: FFIType.cstring): FFIType.i32;
 
-  /** /data/input/pact.h#L2303 */
-  export declare function pactffi_upon_receiving(interaction: PactFfi.InteractionHandle, description: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2331 */
+  export declare function pactffi_message_metadata_iter_next(iter: Pointer<StructPointer<"MessageMetadataIterator">>): Pointer<StructPointer<"MessageMetadataPair">>;
 
-  /** /data/input/pact.h#L2311 */
-  export declare function pactffi_given(interaction: PactFfi.InteractionHandle, description: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2351 */
+  export declare function pactffi_message_get_metadata_iter(message: Pointer<StructPointer<"Message">>): Pointer<StructPointer<"MessageMetadataIterator">>;
 
-  /** /data/input/pact.h#L2330 */
-  export declare function pactffi_interaction_test_name(interaction: PactFfi.InteractionHandle, test_name: FFIType.cstring): FFIType.u32;
+  /** /data/input/pact.h#L2356 */
+  export declare function pactffi_message_metadata_iter_delete(iter: Pointer<StructPointer<"MessageMetadataIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L2341 */
-  export declare function pactffi_given_with_param(interaction: PactFfi.InteractionHandle, description: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.bool;
-
-  /** /data/input/pact.h#L2362 */
-  export declare function pactffi_with_request(interaction: PactFfi.InteractionHandle, method: FFIType.cstring, path: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2361 */
+  export declare function pactffi_message_metadata_pair_delete(pair: Pointer<StructPointer<"MessageMetadataPair">>): FFIType.void;
 
   /** /data/input/pact.h#L2376 */
-  export declare function pactffi_with_query_parameter(interaction: PactFfi.InteractionHandle, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+  export declare function pactffi_message_pact_new_from_json(file_name: FFIType.cstring, json_str: FFIType.cstring): Pointer<StructPointer<"MessagePact">>;
 
-  /** /data/input/pact.h#L2417 */
-  export declare function pactffi_with_query_parameter_v2(interaction: PactFfi.InteractionHandle, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2381 */
+  export declare function pactffi_message_pact_delete(message_pact: Pointer<StructPointer<"MessagePact">>): FFIType.void;
 
-  /** /data/input/pact.h#L2429 */
-  export declare function pactffi_with_specification(pact: PactFfi.PactHandle, version: PactFfi.PactSpecification): FFIType.bool;
+  /** /data/input/pact.h#L2397 */
+  export declare function pactffi_message_pact_get_consumer(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"Consumer">>;
 
-  /** /data/input/pact.h#L2441 */
-  export declare function pactffi_with_pact_metadata(pact: PactFfi.PactHandle, namespace_: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2413 */
+  export declare function pactffi_message_pact_get_provider(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"Provider">>;
 
-  /** /data/input/pact.h#L2457 */
-  export declare function pactffi_with_header(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2433 */
+  export declare function pactffi_message_pact_get_message_iter(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"MessagePactMessageIterator">>;
 
-  /** /data/input/pact.h#L2499 */
-  export declare function pactffi_with_header_v2(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2446 */
+  export declare function pactffi_message_pact_message_iter_next(iter: Pointer<StructPointer<"MessagePactMessageIterator">>): Pointer<StructPointer<"Message">>;
 
-  /** /data/input/pact.h#L2511 */
-  export declare function pactffi_response_status(interaction: PactFfi.InteractionHandle, status: FFIType.u16): FFIType.bool;
+  /** /data/input/pact.h#L2451 */
+  export declare function pactffi_message_pact_message_iter_delete(iter: Pointer<StructPointer<"MessagePactMessageIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L2539 */
-  export declare function pactffi_with_body(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, body: FFIType.cstring): FFIType.bool;
+  /** /data/input/pact.h#L2474 */
+  export declare function pactffi_message_pact_find_metadata(message_pact: Pointer<StructPointer<"MessagePact">>, key1: FFIType.cstring, key2: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L2571 */
-  export declare function pactffi_with_binary_file(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, body: Pointer<PactFfi.uint8_t>, size: FFIType.usize): FFIType.bool;
+  /** /data/input/pact.h#L2496 */
+  export declare function pactffi_message_pact_get_metadata_iter(message_pact: Pointer<StructPointer<"MessagePact">>): Pointer<StructPointer<"MessagePactMetadataIterator">>;
 
-  /** /data/input/pact.h#L2602 */
-  export declare function pactffi_with_multipart_file(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, file: FFIType.cstring, part_name: FFIType.cstring): StructPointer<"StringResult">;
+  /** /data/input/pact.h#L2509 */
+  export declare function pactffi_message_pact_metadata_iter_next(iter: Pointer<StructPointer<"MessagePactMetadataIterator">>): Pointer<StructPointer<"MessagePactMetadataTriple">>;
 
-  /** /data/input/pact.h#L2623 */
-  export declare function pactffi_pact_handle_get_message_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactMessageIterator">>;
+  /** /data/input/pact.h#L2514 */
+  export declare function pactffi_message_pact_metadata_iter_delete(iter: Pointer<StructPointer<"MessagePactMetadataIterator">>): FFIType.void;
 
-  /** /data/input/pact.h#L2640 */
-  export declare function pactffi_pact_handle_get_sync_message_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactSyncMessageIterator">>;
+  /** /data/input/pact.h#L2519 */
+  export declare function pactffi_message_pact_metadata_triple_delete(triple: Pointer<StructPointer<"MessagePactMetadataTriple">>): FFIType.void;
+
+  /** /data/input/pact.h#L2557 */
+  export declare function pactffi_provider_get_name(provider: Pointer<StructPointer<"Provider">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L2568 */
+  export declare function pactffi_pact_get_provider(pact: Pointer<StructPointer<"Pact">>): Pointer<StructPointer<"Provider">>;
+
+  /** /data/input/pact.h#L2573 */
+  export declare function pactffi_pact_provider_delete(provider: Pointer<StructPointer<"Provider">>): FFIType.void;
+
+  /** /data/input/pact.h#L2586 */
+  export declare function pactffi_provider_state_get_name(provider_state: Pointer<StructPointer<"ProviderState">>): FFIType.cstring;
+
+  /** /data/input/pact.h#L2606 */
+  export declare function pactffi_provider_state_get_param_iter(provider_state: Pointer<StructPointer<"ProviderState">>): Pointer<StructPointer<"ProviderStateParamIterator">>;
+
+  /** /data/input/pact.h#L2624 */
+  export declare function pactffi_provider_state_param_iter_next(iter: Pointer<StructPointer<"ProviderStateParamIterator">>): Pointer<StructPointer<"ProviderStateParamPair">>;
+
+  /** /data/input/pact.h#L2629 */
+  export declare function pactffi_provider_state_delete(provider_state: Pointer<StructPointer<"ProviderState">>): FFIType.void;
+
+  /** /data/input/pact.h#L2634 */
+  export declare function pactffi_provider_state_param_iter_delete(iter: Pointer<StructPointer<"ProviderStateParamIterator">>): FFIType.void;
+
+  /** /data/input/pact.h#L2639 */
+  export declare function pactffi_provider_state_param_pair_delete(pair: Pointer<StructPointer<"ProviderStateParamPair">>): FFIType.void;
+
+  /** /data/input/pact.h#L2652 */
+  export declare function pactffi_sync_message_new(): Pointer<StructPointer<"SynchronousMessage">>;
 
   /** /data/input/pact.h#L2657 */
-  export declare function pactffi_pact_handle_get_sync_http_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactSyncHttpIterator">>;
+  export declare function pactffi_sync_message_delete(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.void;
 
-  /** /data/input/pact.h#L2668 */
-  export declare function pactffi_new_message_pact(consumer_name: FFIType.cstring, provider_name: FFIType.cstring): PactFfi.MessagePactHandle;
+  /** /data/input/pact.h#L2675 */
+  export declare function pactffi_sync_message_get_request_contents_str(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L2678 */
-  export declare function pactffi_new_message(pact: PactFfi.MessagePactHandle, description: FFIType.cstring): PactFfi.MessageHandle;
+  /** /data/input/pact.h#L2694 */
+  export declare function pactffi_sync_message_set_request_contents_str(message: Pointer<StructPointer<"SynchronousMessage">>, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2685 */
-  export declare function pactffi_message_expects_to_receive(message: PactFfi.MessageHandle, description: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2710 */
+  export declare function pactffi_sync_message_get_request_contents_length(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.usize;
 
-  /** /data/input/pact.h#L2692 */
-  export declare function pactffi_message_given(message: PactFfi.MessageHandle, description: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2726 */
+  export declare function pactffi_sync_message_get_request_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>): Pointer<FFIType.u8>;
 
-  /** /data/input/pact.h#L2701 */
-  export declare function pactffi_message_given_with_param(message: PactFfi.MessageHandle, description: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L2720 */
-  export declare function pactffi_message_with_contents(message_handle: PactFfi.MessageHandle, content_type: FFIType.cstring, body: Pointer<PactFfi.uint8_t>, size: FFIType.usize): FFIType.void;
-
-  /** /data/input/pact.h#L2731 */
-  export declare function pactffi_message_with_metadata(message_handle: PactFfi.MessageHandle, key: FFIType.cstring, value: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L2741 */
-  export declare function pactffi_message_reify(message_handle: PactFfi.MessageHandle): FFIType.cstring;
+  /** /data/input/pact.h#L2746 */
+  export declare function pactffi_sync_message_set_request_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
 
   /** /data/input/pact.h#L2763 */
-  export declare function pactffi_write_message_pact_file(pact: PactFfi.MessagePactHandle, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
+  export declare function pactffi_sync_message_get_request_contents(message: Pointer<StructPointer<"SynchronousMessage">>): Pointer<StructPointer<"MessageContents">>;
 
-  /** /data/input/pact.h#L2775 */
-  export declare function pactffi_with_message_pact_metadata(pact: PactFfi.MessagePactHandle, namespace_: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2776 */
+  export declare function pactffi_sync_message_get_number_responses(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.usize;
 
-  /** /data/input/pact.h#L2805 */
-  export declare function pactffi_pact_handle_write_file(pact: PactFfi.PactHandle, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
+  /** /data/input/pact.h#L2795 */
+  export declare function pactffi_sync_message_get_response_contents_str(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): FFIType.cstring;
 
-  /** /data/input/pact.h#L2814 */
-  export declare function pactffi_new_async_message(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.MessageHandle;
+  /** /data/input/pact.h#L2817 */
+  export declare function pactffi_sync_message_set_response_contents_str(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize, contents: FFIType.cstring, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2826 */
-  export declare function pactffi_free_pact_handle(pact: PactFfi.PactHandle): FFIType.u32;
+  /** /data/input/pact.h#L2834 */
+  export declare function pactffi_sync_message_get_response_contents_length(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): FFIType.usize;
 
-  /** /data/input/pact.h#L2838 */
-  export declare function pactffi_free_message_pact_handle(pact: PactFfi.MessagePactHandle): FFIType.u32;
+  /** /data/input/pact.h#L2851 */
+  export declare function pactffi_sync_message_get_response_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): Pointer<FFIType.u8>;
 
-  /** /data/input/pact.h#L2860 */
-  export declare function pactffi_verify(args: FFIType.cstring): PactFfi.int32_t;
+  /** /data/input/pact.h#L2875 */
+  export declare function pactffi_sync_message_set_response_contents_bin(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize, contents: Pointer<FFIType.u8>, len: FFIType.usize, content_type: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2877 */
-  export declare function pactffi_verifier_new(): Pointer<StructPointer<"VerifierHandle">>;
+  /** /data/input/pact.h#L2893 */
+  export declare function pactffi_sync_message_get_response_contents(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.usize): Pointer<StructPointer<"MessageContents">>;
 
-  /** /data/input/pact.h#L2891 */
-  export declare function pactffi_verifier_new_for_application(name: FFIType.cstring, version: FFIType.cstring): Pointer<StructPointer<"VerifierHandle">>;
+  /** /data/input/pact.h#L2913 */
+  export declare function pactffi_sync_message_get_description(message: Pointer<StructPointer<"SynchronousMessage">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L2896 */
-  export declare function pactffi_verifier_shutdown(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.void;
+  /** /data/input/pact.h#L2930 */
+  export declare function pactffi_sync_message_set_description(message: Pointer<StructPointer<"SynchronousMessage">>, description: FFIType.cstring): FFIType.i32;
 
-  /** /data/input/pact.h#L2908 */
-  export declare function pactffi_verifier_set_provider_info(handle: Pointer<StructPointer<"VerifierHandle">>, name: FFIType.cstring, scheme: FFIType.cstring, host: FFIType.cstring, port: FFIType.u16, path: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2950 */
+  export declare function pactffi_sync_message_get_provider_state(message: Pointer<StructPointer<"SynchronousMessage">>, index: FFIType.u32): Pointer<StructPointer<"ProviderState">>;
 
-  /** /data/input/pact.h#L2929 */
-  export declare function pactffi_verifier_add_provider_transport(handle: Pointer<StructPointer<"VerifierHandle">>, protocol: FFIType.cstring, port: FFIType.u16, path: FFIType.cstring, scheme: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L2964 */
+  export declare function pactffi_sync_message_get_provider_state_iter(message: Pointer<StructPointer<"SynchronousMessage">>): Pointer<StructPointer<"ProviderStateIterator">>;
 
-  /** /data/input/pact.h#L2948 */
-  export declare function pactffi_verifier_set_filter_info(handle: Pointer<StructPointer<"VerifierHandle">>, filter_description: FFIType.cstring, filter_state: FFIType.cstring, filter_no_state: FFIType.u8): FFIType.void;
+  /** /data/input/pact.h#L2976 */
+  export declare function pactffi_string_delete(string: FFIType.cstring): FFIType.void;
 
-  /** /data/input/pact.h#L2969 */
-  export declare function pactffi_verifier_set_provider_state(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, teardown: FFIType.u8, body: FFIType.u8): FFIType.void;
+  /** /data/input/pact.h#L3003 */
+  export declare function pactffi_create_mock_server(pact_str: FFIType.cstring, addr_str: FFIType.cstring, tls: FFIType.bool): PactFfi.int32_t;
 
-  /** /data/input/pact.h#L2985 */
-  export declare function pactffi_verifier_set_verification_options(handle: Pointer<StructPointer<"VerifierHandle">>, disable_ssl_verification: FFIType.u8, request_timeout: FFIType.u64): FFIType.i32;
+  /** /data/input/pact.h#L3017 */
+  export declare function pactffi_get_tls_ca_certificate(): FFIType.cstring;
 
-  /** /data/input/pact.h#L3000 */
-  export declare function pactffi_verifier_set_coloured_output(handle: Pointer<StructPointer<"VerifierHandle">>, coloured_output: FFIType.u8): FFIType.i32;
+  /** /data/input/pact.h#L3043 */
+  export declare function pactffi_create_mock_server_for_pact(pact: PactFfi.PactHandle, addr_str: FFIType.cstring, tls: FFIType.bool): PactFfi.int32_t;
 
-  /** /data/input/pact.h#L3014 */
-  export declare function pactffi_verifier_set_no_pacts_is_error(handle: Pointer<StructPointer<"VerifierHandle">>, is_error: FFIType.u8): FFIType.i32;
+  /** /data/input/pact.h#L3079 */
+  export declare function pactffi_create_mock_server_for_transport(pact: PactFfi.PactHandle, addr: FFIType.cstring, port: PactFfi.uint16_t, transport: FFIType.cstring, transport_config: FFIType.cstring): PactFfi.int32_t;
 
-  /** /data/input/pact.h#L3034 */
-  export declare function pactffi_verifier_set_publish_options(handle: Pointer<StructPointer<"VerifierHandle">>, provider_version: FFIType.cstring, build_url: FFIType.cstring, provider_tags: Pointer<FFIType.cstring>, provider_tags_len: FFIType.u16, provider_branch: FFIType.cstring): FFIType.i32;
+  /** /data/input/pact.h#L3091 */
+  export declare function pactffi_mock_server_matched(mock_server_port: PactFfi.int32_t): FFIType.bool;
 
-  /** /data/input/pact.h#L3050 */
-  export declare function pactffi_verifier_set_consumer_filters(handle: Pointer<StructPointer<"VerifierHandle">>, consumer_filters: Pointer<FFIType.cstring>, consumer_filters_len: FFIType.u16): FFIType.void;
+  /** /data/input/pact.h#L3108 */
+  export declare function pactffi_mock_server_mismatches(mock_server_port: PactFfi.int32_t): FFIType.cstring;
 
-  /** /data/input/pact.h#L3062 */
-  export declare function pactffi_verifier_add_custom_header(handle: Pointer<StructPointer<"VerifierHandle">>, header_name: FFIType.cstring, header_value: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L3115 */
+  export declare function pactffi_cleanup_mock_server(mock_server_port: PactFfi.int32_t): FFIType.bool;
 
-  /** /data/input/pact.h#L3075 */
-  export declare function pactffi_verifier_add_file_source(handle: Pointer<StructPointer<"VerifierHandle">>, file: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L3087 */
-  export declare function pactffi_verifier_add_directory_source(handle: Pointer<StructPointer<"VerifierHandle">>, directory: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L3101 */
-  export declare function pactffi_verifier_url_source(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring): FFIType.void;
-
-  /** /data/input/pact.h#L3120 */
-  export declare function pactffi_verifier_broker_source(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring): FFIType.void;
+  /** /data/input/pact.h#L3138 */
+  export declare function pactffi_write_pact_file(mock_server_port: PactFfi.int32_t, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
 
   /** /data/input/pact.h#L3147 */
-  export declare function pactffi_verifier_broker_source_with_selectors(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring, enable_pending: FFIType.u8, include_wip_pacts_since: FFIType.cstring, provider_tags: Pointer<FFIType.cstring>, provider_tags_len: FFIType.u16, provider_branch: FFIType.cstring, consumer_version_selectors: Pointer<FFIType.cstring>, consumer_version_selectors_len: FFIType.u16, consumer_version_tags: Pointer<FFIType.cstring>, consumer_version_tags_len: FFIType.u16): FFIType.void;
+  export declare function pactffi_mock_server_logs(mock_server_port: PactFfi.int32_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L3159 */
+  export declare function pactffi_generate_datetime_string(format: FFIType.cstring): StructPointer<"StringResult">;
 
   /** /data/input/pact.h#L3169 */
-  export declare function pactffi_verifier_execute(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.i32;
+  export declare function pactffi_check_regex(regex: FFIType.cstring, example: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3180 */
+  export declare function pactffi_generate_regex_value(regex: FFIType.cstring): StructPointer<"StringResult">;
+
+  /** /data/input/pact.h#L3192 */
+  export declare function pactffi_free_string(s: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3203 */
+  export declare function pactffi_new_pact(consumer_name: FFIType.cstring, provider_name: FFIType.cstring): PactFfi.PactHandle;
+
+  /** /data/input/pact.h#L3212 */
+  export declare function pactffi_new_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
 
   /** /data/input/pact.h#L3220 */
+  export declare function pactffi_new_message_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
+
+  /** /data/input/pact.h#L3228 */
+  export declare function pactffi_new_sync_message_interaction(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.InteractionHandle;
+
+  /** /data/input/pact.h#L3236 */
+  export declare function pactffi_upon_receiving(interaction: PactFfi.InteractionHandle, description: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3244 */
+  export declare function pactffi_given(interaction: PactFfi.InteractionHandle, description: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3263 */
+  export declare function pactffi_interaction_test_name(interaction: PactFfi.InteractionHandle, test_name: FFIType.cstring): FFIType.u32;
+
+  /** /data/input/pact.h#L3276 */
+  export declare function pactffi_given_with_param(interaction: PactFfi.InteractionHandle, description: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3297 */
+  export declare function pactffi_with_request(interaction: PactFfi.InteractionHandle, method: FFIType.cstring, path: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3311 */
+  export declare function pactffi_with_query_parameter(interaction: PactFfi.InteractionHandle, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3352 */
+  export declare function pactffi_with_query_parameter_v2(interaction: PactFfi.InteractionHandle, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3364 */
+  export declare function pactffi_with_specification(pact: PactFfi.PactHandle, version: PactFfi.PactSpecification): FFIType.bool;
+
+  /** /data/input/pact.h#L3376 */
+  export declare function pactffi_with_pact_metadata(pact: PactFfi.PactHandle, namespace_: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3392 */
+  export declare function pactffi_with_header(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3434 */
+  export declare function pactffi_with_header_v2(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, name: FFIType.cstring, index: FFIType.usize, value: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3446 */
+  export declare function pactffi_response_status(interaction: PactFfi.InteractionHandle, status: FFIType.u16): FFIType.bool;
+
+  /** /data/input/pact.h#L3474 */
+  export declare function pactffi_with_body(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, body: FFIType.cstring): FFIType.bool;
+
+  /** /data/input/pact.h#L3506 */
+  export declare function pactffi_with_binary_file(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, body: Pointer<PactFfi.uint8_t>, size: FFIType.usize): FFIType.bool;
+
+  /** /data/input/pact.h#L3537 */
+  export declare function pactffi_with_multipart_file(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, file: FFIType.cstring, part_name: FFIType.cstring): StructPointer<"StringResult">;
+
+  /** /data/input/pact.h#L3558 */
+  export declare function pactffi_pact_handle_get_message_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactMessageIterator">>;
+
+  /** /data/input/pact.h#L3575 */
+  export declare function pactffi_pact_handle_get_sync_message_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactSyncMessageIterator">>;
+
+  /** /data/input/pact.h#L3592 */
+  export declare function pactffi_pact_handle_get_sync_http_iter(pact: PactFfi.PactHandle): Pointer<StructPointer<"PactSyncHttpIterator">>;
+
+  /** /data/input/pact.h#L3603 */
+  export declare function pactffi_new_message_pact(consumer_name: FFIType.cstring, provider_name: FFIType.cstring): PactFfi.MessagePactHandle;
+
+  /** /data/input/pact.h#L3613 */
+  export declare function pactffi_new_message(pact: PactFfi.MessagePactHandle, description: FFIType.cstring): PactFfi.MessageHandle;
+
+  /** /data/input/pact.h#L3620 */
+  export declare function pactffi_message_expects_to_receive(message: PactFfi.MessageHandle, description: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3627 */
+  export declare function pactffi_message_given(message: PactFfi.MessageHandle, description: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3636 */
+  export declare function pactffi_message_given_with_param(message: PactFfi.MessageHandle, description: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3655 */
+  export declare function pactffi_message_with_contents(message_handle: PactFfi.MessageHandle, content_type: FFIType.cstring, body: Pointer<PactFfi.uint8_t>, size: FFIType.usize): FFIType.void;
+
+  /** /data/input/pact.h#L3666 */
+  export declare function pactffi_message_with_metadata(message_handle: PactFfi.MessageHandle, key: FFIType.cstring, value: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3676 */
+  export declare function pactffi_message_reify(message_handle: PactFfi.MessageHandle): FFIType.cstring;
+
+  /** /data/input/pact.h#L3698 */
+  export declare function pactffi_write_message_pact_file(pact: PactFfi.MessagePactHandle, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
+
+  /** /data/input/pact.h#L3710 */
+  export declare function pactffi_with_message_pact_metadata(pact: PactFfi.MessagePactHandle, namespace_: FFIType.cstring, name: FFIType.cstring, value: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3740 */
+  export declare function pactffi_pact_handle_write_file(pact: PactFfi.PactHandle, directory: FFIType.cstring, overwrite: FFIType.bool): PactFfi.int32_t;
+
+  /** /data/input/pact.h#L3749 */
+  export declare function pactffi_new_async_message(pact: PactFfi.PactHandle, description: FFIType.cstring): PactFfi.MessageHandle;
+
+  /** /data/input/pact.h#L3761 */
+  export declare function pactffi_free_pact_handle(pact: PactFfi.PactHandle): FFIType.u32;
+
+  /** /data/input/pact.h#L3773 */
+  export declare function pactffi_free_message_pact_handle(pact: PactFfi.MessagePactHandle): FFIType.u32;
+
+  /** /data/input/pact.h#L3795 */
+  export declare function pactffi_verify(args: FFIType.cstring): PactFfi.int32_t;
+
+  /** /data/input/pact.h#L3812 */
+  export declare function pactffi_verifier_new(): Pointer<StructPointer<"VerifierHandle">>;
+
+  /** /data/input/pact.h#L3826 */
+  export declare function pactffi_verifier_new_for_application(name: FFIType.cstring, version: FFIType.cstring): Pointer<StructPointer<"VerifierHandle">>;
+
+  /** /data/input/pact.h#L3831 */
+  export declare function pactffi_verifier_shutdown(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.void;
+
+  /** /data/input/pact.h#L3843 */
+  export declare function pactffi_verifier_set_provider_info(handle: Pointer<StructPointer<"VerifierHandle">>, name: FFIType.cstring, scheme: FFIType.cstring, host: FFIType.cstring, port: FFIType.u16, path: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3864 */
+  export declare function pactffi_verifier_add_provider_transport(handle: Pointer<StructPointer<"VerifierHandle">>, protocol: FFIType.cstring, port: FFIType.u16, path: FFIType.cstring, scheme: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L3883 */
+  export declare function pactffi_verifier_set_filter_info(handle: Pointer<StructPointer<"VerifierHandle">>, filter_description: FFIType.cstring, filter_state: FFIType.cstring, filter_no_state: FFIType.u8): FFIType.void;
+
+  /** /data/input/pact.h#L3904 */
+  export declare function pactffi_verifier_set_provider_state(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, teardown: FFIType.u8, body: FFIType.u8): FFIType.void;
+
+  /** /data/input/pact.h#L3920 */
+  export declare function pactffi_verifier_set_verification_options(handle: Pointer<StructPointer<"VerifierHandle">>, disable_ssl_verification: FFIType.u8, request_timeout: FFIType.u64): FFIType.i32;
+
+  /** /data/input/pact.h#L3935 */
+  export declare function pactffi_verifier_set_coloured_output(handle: Pointer<StructPointer<"VerifierHandle">>, coloured_output: FFIType.u8): FFIType.i32;
+
+  /** /data/input/pact.h#L3949 */
+  export declare function pactffi_verifier_set_no_pacts_is_error(handle: Pointer<StructPointer<"VerifierHandle">>, is_error: FFIType.u8): FFIType.i32;
+
+  /** /data/input/pact.h#L3969 */
+  export declare function pactffi_verifier_set_publish_options(handle: Pointer<StructPointer<"VerifierHandle">>, provider_version: FFIType.cstring, build_url: FFIType.cstring, provider_tags: Pointer<FFIType.cstring>, provider_tags_len: FFIType.u16, provider_branch: FFIType.cstring): FFIType.i32;
+
+  /** /data/input/pact.h#L3985 */
+  export declare function pactffi_verifier_set_consumer_filters(handle: Pointer<StructPointer<"VerifierHandle">>, consumer_filters: Pointer<FFIType.cstring>, consumer_filters_len: FFIType.u16): FFIType.void;
+
+  /** /data/input/pact.h#L3997 */
+  export declare function pactffi_verifier_add_custom_header(handle: Pointer<StructPointer<"VerifierHandle">>, header_name: FFIType.cstring, header_value: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L4010 */
+  export declare function pactffi_verifier_add_file_source(handle: Pointer<StructPointer<"VerifierHandle">>, file: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L4022 */
+  export declare function pactffi_verifier_add_directory_source(handle: Pointer<StructPointer<"VerifierHandle">>, directory: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L4036 */
+  export declare function pactffi_verifier_url_source(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L4055 */
+  export declare function pactffi_verifier_broker_source(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring): FFIType.void;
+
+  /** /data/input/pact.h#L4082 */
+  export declare function pactffi_verifier_broker_source_with_selectors(handle: Pointer<StructPointer<"VerifierHandle">>, url: FFIType.cstring, username: FFIType.cstring, password: FFIType.cstring, token: FFIType.cstring, enable_pending: FFIType.u8, include_wip_pacts_since: FFIType.cstring, provider_tags: Pointer<FFIType.cstring>, provider_tags_len: FFIType.u16, provider_branch: FFIType.cstring, consumer_version_selectors: Pointer<FFIType.cstring>, consumer_version_selectors_len: FFIType.u16, consumer_version_tags: Pointer<FFIType.cstring>, consumer_version_tags_len: FFIType.u16): FFIType.void;
+
+  /** /data/input/pact.h#L4104 */
+  export declare function pactffi_verifier_execute(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.i32;
+
+  /** /data/input/pact.h#L4155 */
   export declare function pactffi_verifier_cli_args(): FFIType.cstring;
 
-  /** /data/input/pact.h#L3229 */
+  /** /data/input/pact.h#L4164 */
   export declare function pactffi_verifier_logs(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L3238 */
+  /** /data/input/pact.h#L4173 */
   export declare function pactffi_verifier_logs_for_provider(provider_name: FFIType.cstring): FFIType.cstring;
 
-  /** /data/input/pact.h#L3249 */
+  /** /data/input/pact.h#L4184 */
   export declare function pactffi_verifier_output(handle: Pointer<StructPointer<"VerifierHandle">>, strip_ansi: FFIType.u8): FFIType.cstring;
 
-  /** /data/input/pact.h#L3257 */
+  /** /data/input/pact.h#L4192 */
   export declare function pactffi_verifier_json(handle: Pointer<StructPointer<"VerifierHandle">>): FFIType.cstring;
 
-  /** /data/input/pact.h#L3285 */
+  /** /data/input/pact.h#L4220 */
   export declare function pactffi_using_plugin(pact: PactFfi.PactHandle, plugin_name: FFIType.cstring, plugin_version: FFIType.cstring): FFIType.u32;
 
-  /** /data/input/pact.h#L3293 */
+  /** /data/input/pact.h#L4228 */
   export declare function pactffi_cleanup_plugins(pact: PactFfi.PactHandle): FFIType.void;
 
-  /** /data/input/pact.h#L3323 */
+  /** /data/input/pact.h#L4258 */
   export declare function pactffi_interaction_contents(interaction: PactFfi.InteractionHandle, part: PactFfi.InteractionPart, content_type: FFIType.cstring, contents: FFIType.cstring): FFIType.u32;
+
+  /** /data/input/pact.h#L4279 */
+  export declare function pactffi_matches_string_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: FFIType.cstring, actual_value: FFIType.cstring, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4299 */
+  export declare function pactffi_matches_u64_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: PactFfi.uint64_t, actual_value: PactFfi.uint64_t, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4319 */
+  export declare function pactffi_matches_i64_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: PactFfi.int64_t, actual_value: PactFfi.int64_t, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4339 */
+  export declare function pactffi_matches_f64_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: FFIType.f64, actual_value: FFIType.f64, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4359 */
+  export declare function pactffi_matches_bool_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: PactFfi.uint8_t, actual_value: PactFfi.uint8_t, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4383 */
+  export declare function pactffi_matches_binary_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: Pointer<FFIType.u8>, expected_value_len: PactFfi.uintptr_t, actual_value: Pointer<FFIType.u8>, actual_value_len: PactFfi.uintptr_t, cascaded: PactFfi.uint8_t): FFIType.cstring;
+
+  /** /data/input/pact.h#L4406 */
+  export declare function pactffi_matches_json_value(matching_rule: Pointer<StructPointer<"MatchingRule">>, expected_value: FFIType.cstring, actual_value: FFIType.cstring, cascaded: PactFfi.uint8_t): FFIType.cstring;
 
   export declare function $$close(): void;
 }

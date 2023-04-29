@@ -33,7 +33,90 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_fetch_log_buffer, %i[string], :string
   attach_function :pactffi_parse_pact_json, %i[string], :pointer
   attach_function :pactffi_pact_model_delete, %i[pointer], :void
+  attach_function :pactffi_pact_model_interaction_iterator, %i[pointer], :pointer
+  attach_function :pactffi_pact_spec_version, %i[pointer], :int32
+  attach_function :pactffi_pact_interaction_delete, %i[pointer], :void
+  attach_function :pactffi_async_message_new, %i[], :pointer
+  attach_function :pactffi_async_message_delete, %i[pointer], :void
+  attach_function :pactffi_async_message_get_contents, %i[pointer], :pointer
+  attach_function :pactffi_async_message_get_contents_str, %i[pointer], :string
+  attach_function :pactffi_async_message_set_contents_str, %i[pointer string string], :void
+  attach_function :pactffi_async_message_get_contents_length, %i[pointer], :size_t
+  attach_function :pactffi_async_message_get_contents_bin, %i[pointer], :pointer
+  attach_function :pactffi_async_message_set_contents_bin, %i[pointer pointer size_t string], :void
+  attach_function :pactffi_async_message_get_description, %i[pointer], :string
+  attach_function :pactffi_async_message_set_description, %i[pointer string], :int32
+  attach_function :pactffi_async_message_get_provider_state, %i[pointer uint32_t], :pointer
+  attach_function :pactffi_async_message_get_provider_state_iter, %i[pointer], :pointer
   attach_function :pactffi_consumer_get_name, %i[pointer], :string
+  attach_function :pactffi_pact_get_consumer, %i[pointer], :pointer
+  attach_function :pactffi_pact_consumer_delete, %i[pointer], :void
+  attach_function :pactffi_message_contents_get_contents_str, %i[pointer], :string
+  attach_function :pactffi_message_contents_set_contents_str, %i[pointer string string], :void
+  attach_function :pactffi_message_contents_get_contents_length, %i[pointer], :size_t
+  attach_function :pactffi_message_contents_get_contents_bin, %i[pointer], :pointer
+  attach_function :pactffi_message_contents_set_contents_bin, %i[pointer pointer size_t string], :void
+  attach_function :pactffi_message_contents_get_metadata_iter, %i[pointer], :pointer
+  attach_function :pactffi_message_contents_get_matching_rule_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_request_contents_get_matching_rule_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_response_contents_get_matching_rule_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_message_contents_get_generators_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_request_contents_get_generators_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_response_contents_get_generators_iter, %i[pointer int32], :pointer
+  attach_function :pactffi_parse_matcher_definition, %i[string], :pointer
+  attach_function :pactffi_matcher_definition_error, %i[pointer], :string
+  attach_function :pactffi_matcher_definition_value, %i[pointer], :string
+  attach_function :pactffi_matcher_definition_delete, %i[pointer], :void
+  attach_function :pactffi_matcher_definition_generator, %i[pointer], :pointer
+  attach_function :pactffi_matcher_definition_value_type, %i[pointer], :int32
+  attach_function :pactffi_matching_rule_iter_delete, %i[pointer], :void
+  attach_function :pactffi_matcher_definition_iter, %i[pointer], :pointer
+  attach_function :pactffi_matching_rule_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_matching_rule_id, %i[pointer], :uint16
+  attach_function :pactffi_matching_rule_value, %i[pointer], :string
+  attach_function :pactffi_matching_rule_pointer, %i[pointer], :pointer
+  attach_function :pactffi_matching_rule_reference_name, %i[pointer], :string
+  attach_function :pactffi_validate_datetime, %i[string string], :int32
+  attach_function :pactffi_generator_to_json, %i[pointer], :string
+  attach_function :pactffi_generator_generate_string, %i[pointer string], :string
+  attach_function :pactffi_generator_generate_integer, %i[pointer string], :uint16
+  attach_function :pactffi_generators_iter_delete, %i[pointer], :void
+  attach_function :pactffi_generators_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_generators_iter_pair_delete, %i[pointer], :void
+  attach_function :pactffi_sync_http_new, %i[], :pointer
+  attach_function :pactffi_sync_http_delete, %i[pointer], :void
+  attach_function :pactffi_sync_http_get_request, %i[pointer], :pointer
+  attach_function :pactffi_sync_http_get_request_contents, %i[pointer], :string
+  attach_function :pactffi_sync_http_set_request_contents, %i[pointer string string], :void
+  attach_function :pactffi_sync_http_get_request_contents_length, %i[pointer], :size_t
+  attach_function :pactffi_sync_http_get_request_contents_bin, %i[pointer], :pointer
+  attach_function :pactffi_sync_http_set_request_contents_bin, %i[pointer pointer size_t string], :void
+  attach_function :pactffi_sync_http_get_response, %i[pointer], :pointer
+  attach_function :pactffi_sync_http_get_response_contents, %i[pointer], :string
+  attach_function :pactffi_sync_http_set_response_contents, %i[pointer string string], :void
+  attach_function :pactffi_sync_http_get_response_contents_length, %i[pointer], :size_t
+  attach_function :pactffi_sync_http_get_response_contents_bin, %i[pointer], :pointer
+  attach_function :pactffi_sync_http_set_response_contents_bin, %i[pointer pointer size_t string], :void
+  attach_function :pactffi_sync_http_get_description, %i[pointer], :string
+  attach_function :pactffi_sync_http_set_description, %i[pointer string], :int32
+  attach_function :pactffi_sync_http_get_provider_state, %i[pointer uint32_t], :pointer
+  attach_function :pactffi_sync_http_get_provider_state_iter, %i[pointer], :pointer
+  attach_function :pactffi_pact_interaction_as_synchronous_http, %i[pointer], :pointer
+  attach_function :pactffi_pact_interaction_as_message, %i[pointer], :pointer
+  attach_function :pactffi_pact_interaction_as_asynchronous_message, %i[pointer], :pointer
+  attach_function :pactffi_pact_interaction_as_synchronous_message, %i[pointer], :pointer
+  attach_function :pactffi_pact_message_iter_delete, %i[pointer], :void
+  attach_function :pactffi_pact_message_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_sync_message_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_sync_message_iter_delete, %i[pointer], :void
+  attach_function :pactffi_pact_sync_http_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_sync_http_iter_delete, %i[pointer], :void
+  attach_function :pactffi_pact_interaction_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_interaction_iter_delete, %i[pointer], :void
+  attach_function :pactffi_matching_rule_to_json, %i[pointer], :string
+  attach_function :pactffi_matching_rules_iter_delete, %i[pointer], :void
+  attach_function :pactffi_matching_rules_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_matching_rules_iter_pair_delete, %i[pointer], :void
   attach_function :pactffi_message_new, %i[], :pointer
   attach_function :pactffi_message_new_from_json, %i[uint32_t string int32], :pointer
   attach_function :pactffi_message_new_from_body, %i[string string], :pointer
@@ -51,8 +134,8 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_provider_state_iter_delete, %i[pointer], :void
   attach_function :pactffi_message_find_metadata, %i[pointer string], :string
   attach_function :pactffi_message_insert_metadata, %i[pointer string string], :int32
-  attach_function :pactffi_message_get_metadata_iter, %i[pointer], :pointer
   attach_function :pactffi_message_metadata_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_message_get_metadata_iter, %i[pointer], :pointer
   attach_function :pactffi_message_metadata_iter_delete, %i[pointer], :void
   attach_function :pactffi_message_metadata_pair_delete, %i[pointer], :void
   attach_function :pactffi_message_pact_new_from_json, %i[string string], :pointer
@@ -68,64 +151,33 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_message_pact_metadata_iter_delete, %i[pointer], :void
   attach_function :pactffi_message_pact_metadata_triple_delete, %i[pointer], :void
   attach_function :pactffi_provider_get_name, %i[pointer], :string
+  attach_function :pactffi_pact_get_provider, %i[pointer], :pointer
+  attach_function :pactffi_pact_provider_delete, %i[pointer], :void
   attach_function :pactffi_provider_state_get_name, %i[pointer], :string
   attach_function :pactffi_provider_state_get_param_iter, %i[pointer], :pointer
   attach_function :pactffi_provider_state_param_iter_next, %i[pointer], :pointer
   attach_function :pactffi_provider_state_delete, %i[pointer], :void
   attach_function :pactffi_provider_state_param_iter_delete, %i[pointer], :void
   attach_function :pactffi_provider_state_param_pair_delete, %i[pointer], :void
-  attach_function :pactffi_pact_message_iter_delete, %i[pointer], :void
-  attach_function :pactffi_pact_message_iter_next, %i[pointer], :pointer
-  attach_function :pactffi_pact_sync_message_iter_next, %i[pointer], :pointer
-  attach_function :pactffi_pact_sync_message_iter_delete, %i[pointer], :void
-  attach_function :pactffi_pact_sync_http_iter_next, %i[pointer], :pointer
-  attach_function :pactffi_pact_sync_http_iter_delete, %i[pointer], :void
   attach_function :pactffi_sync_message_new, %i[], :pointer
   attach_function :pactffi_sync_message_delete, %i[pointer], :void
-  attach_function :pactffi_sync_message_get_request_contents, %i[pointer], :string
-  attach_function :pactffi_sync_message_set_request_contents, %i[pointer string string], :void
+  attach_function :pactffi_sync_message_get_request_contents_str, %i[pointer], :string
+  attach_function :pactffi_sync_message_set_request_contents_str, %i[pointer string string], :void
   attach_function :pactffi_sync_message_get_request_contents_length, %i[pointer], :size_t
   attach_function :pactffi_sync_message_get_request_contents_bin, %i[pointer], :pointer
   attach_function :pactffi_sync_message_set_request_contents_bin, %i[pointer pointer size_t string], :void
+  attach_function :pactffi_sync_message_get_request_contents, %i[pointer], :pointer
   attach_function :pactffi_sync_message_get_number_responses, %i[pointer], :size_t
-  attach_function :pactffi_sync_message_get_response_contents, %i[pointer size_t], :string
-  attach_function :pactffi_sync_message_set_response_contents, %i[pointer size_t string string], :void
+  attach_function :pactffi_sync_message_get_response_contents_str, %i[pointer size_t], :string
+  attach_function :pactffi_sync_message_set_response_contents_str, %i[pointer size_t string string], :void
   attach_function :pactffi_sync_message_get_response_contents_length, %i[pointer size_t], :size_t
   attach_function :pactffi_sync_message_get_response_contents_bin, %i[pointer size_t], :pointer
   attach_function :pactffi_sync_message_set_response_contents_bin, %i[pointer size_t pointer size_t string], :void
+  attach_function :pactffi_sync_message_get_response_contents, %i[pointer size_t], :pointer
   attach_function :pactffi_sync_message_get_description, %i[pointer], :string
   attach_function :pactffi_sync_message_set_description, %i[pointer string], :int32
   attach_function :pactffi_sync_message_get_provider_state, %i[pointer uint32_t], :pointer
   attach_function :pactffi_sync_message_get_provider_state_iter, %i[pointer], :pointer
-  attach_function :pactffi_sync_http_new, %i[], :pointer
-  attach_function :pactffi_sync_http_delete, %i[pointer], :void
-  attach_function :pactffi_sync_http_get_request_contents, %i[pointer], :string
-  attach_function :pactffi_sync_http_set_request_contents, %i[pointer string string], :void
-  attach_function :pactffi_sync_http_get_request_contents_length, %i[pointer], :size_t
-  attach_function :pactffi_sync_http_get_request_contents_bin, %i[pointer], :pointer
-  attach_function :pactffi_sync_http_set_request_contents_bin, %i[pointer pointer size_t string], :void
-  attach_function :pactffi_sync_http_get_response_contents, %i[pointer], :string
-  attach_function :pactffi_sync_http_set_response_contents, %i[pointer string string], :void
-  attach_function :pactffi_sync_http_get_response_contents_length, %i[pointer], :size_t
-  attach_function :pactffi_sync_http_get_response_contents_bin, %i[pointer], :pointer
-  attach_function :pactffi_sync_http_set_response_contents_bin, %i[pointer pointer size_t string], :void
-  attach_function :pactffi_sync_http_get_description, %i[pointer], :string
-  attach_function :pactffi_sync_http_set_description, %i[pointer string], :int32
-  attach_function :pactffi_sync_http_get_provider_state, %i[pointer uint32_t], :pointer
-  attach_function :pactffi_sync_http_get_provider_state_iter, %i[pointer], :pointer
-  attach_function :pactffi_parse_matcher_definition, %i[string], :pointer
-  attach_function :pactffi_matcher_definition_error, %i[pointer], :string
-  attach_function :pactffi_matcher_definition_value, %i[pointer], :string
-  attach_function :pactffi_matcher_definition_delete, %i[pointer], :void
-  attach_function :pactffi_matcher_definition_generator, %i[pointer], :pointer
-  attach_function :pactffi_matcher_definition_value_type, %i[pointer], :int32
-  attach_function :pactffi_matching_rule_iter_delete, %i[pointer], :void
-  attach_function :pactffi_matcher_definition_iter, %i[pointer], :pointer
-  attach_function :pactffi_matching_rule_iter_next, %i[pointer], :pointer
-  attach_function :pactffi_matching_rule_to_json, %i[pointer], :string
-  attach_function :pactffi_generator_to_json, %i[pointer], :string
-  attach_function :pactffi_generator_generate_string, %i[pointer string], :string
-  attach_function :pactffi_generator_generate_integer, %i[pointer string], :uint16
   attach_function :pactffi_string_delete, %i[string], :void
   attach_function :pactffi_create_mock_server, %i[string string bool], :int32
   attach_function :pactffi_get_tls_ca_certificate, %i[], :string
@@ -204,4 +256,11 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_using_plugin, %i[uint16 string string], :uint32_t
   attach_function :pactffi_cleanup_plugins, %i[uint16], :void
   attach_function :pactffi_interaction_contents, %i[uint32_t int32 string string], :uint32_t
+  attach_function :pactffi_matches_string_value, %i[pointer string string uint8], :string
+  attach_function :pactffi_matches_u64_value, %i[pointer ulong_long ulong_long uint8], :string
+  attach_function :pactffi_matches_i64_value, %i[pointer int64 int64 uint8], :string
+  attach_function :pactffi_matches_f64_value, %i[pointer double double uint8], :string
+  attach_function :pactffi_matches_bool_value, %i[pointer uint8 uint8 uint8], :string
+  attach_function :pactffi_matches_binary_value, %i[pointer pointer ulong_long pointer ulong_long uint8], :string
+  attach_function :pactffi_matches_json_value, %i[pointer string string uint8], :string
 } as const;
