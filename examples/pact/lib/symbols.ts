@@ -200,6 +200,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_given, %i[uint32_t string], :bool
   attach_function :pactffi_interaction_test_name, %i[uint32_t string], :uint32_t
   attach_function :pactffi_given_with_param, %i[uint32_t string string string], :bool
+  attach_function :pactffi_given_with_params, %i[uint32_t string string], :int32
   attach_function :pactffi_with_request, %i[uint32_t string string], :bool
   attach_function :pactffi_with_query_parameter, %i[uint32_t string size_t string], :bool
   attach_function :pactffi_with_query_parameter_v2, %i[uint32_t string size_t string], :bool
