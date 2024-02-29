@@ -243,10 +243,10 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
     if (name === null) {
       const rec = getTypeInfo({ type: type.type, name: null, lib });
 
-      return { tsType: `Pointer<${rec.tsType}>`, nativeType: "pointer" };
+      return { tsType: `Pointer<${rec.tsType}>`, nativeType: "uintptr" };
     }
 
-    return { tsType: `Pointer<"${name}">`, nativeType: "pointer" };
+    return { tsType: `Pointer<"${name}">`, nativeType: "uintptr" };
   }
 
   if (type.tag === ":function-pointer") {
@@ -257,17 +257,17 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   }
 
   if (type.tag === ":struct") {
-    return { tsType: `StructPointer<"${type.name}">`, nativeType: "pointer" };
+    return { tsType: `StructPointer<"${type.name}">`, nativeType: "uintptr" };
   }
 
   if (type.tag === "struct") {
     if (name === null && type.name !== null) {
-      return { tsType: `StructPointer<"${type.name}">`, nativeType: "pointer" };
+      return { tsType: `StructPointer<"${type.name}">`, nativeType: "uintptr" };
     } else if (name === null && type.name === null) {
       throw new Error("Struct does not have a name: " + JSON.stringify(type));
     }
 
-    return { tsType: `StructPointer<"${name}">`, nativeType: "pointer" };
+    return { tsType: `StructPointer<"${name}">`, nativeType: "uintptr" };
   }
 
   if (type.tag === "union") {
@@ -282,7 +282,7 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   }
 
   if (type.tag === ":void") {
-    return { tsType: "FFIType.void", nativeType: "void" };
+    return { tsType: "FFIType.void", nativeType: "" };
   }
 
   if (type.tag === "size_t") {
@@ -331,7 +331,7 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   if (
     (type.tag === ":unsigned-int" && type["bit-size"] === 32)
   ) {
-    return { tsType: `FFIType.u32`, nativeType: "uint32_t" };
+    return { tsType: `FFIType.u32`, nativeType: "uint32" };
     // return { tsType: `FFIType.u32`, nativeType: "uint32_t" };
   }
 
@@ -344,12 +344,12 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   }
 
   if (type.tag === ":float" && type["bit-size"] === 32) {
-    return { tsType: `FFIType.f32`, nativeType: "float" };
+    return { tsType: `FFIType.f32`, nativeType: "float32" };
     // return { tsType: `FFIType.f32`, nativeType: "float" };
   }
 
   if (type.tag === ":double" && type["bit-size"] === 64) {
-    return { tsType: `FFIType.f64`, nativeType: "double" };
+    return { tsType: `FFIType.f64`, nativeType: "float64" };
     // return { tsType: `FFIType.f64`, nativeType: "double" };
   }
 
@@ -361,7 +361,7 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
     (type.tag === ":unsigned-long" && type["bit-size"] === 64) ||
     (type.tag === ":unsigned-long-long" && type["bit-size"] === 64)
   ) {
-    return { tsType: `FFIType.u64`, nativeType: "ulong_long" };
+    return { tsType: `FFIType.u64`, nativeType: "uint64" };
     // return { tsType: `FFIType.u64`, nativeType: "uint64_t" };
   }
 
@@ -369,7 +369,7 @@ function getTypeInfoBasic({ type, name, lib }: GetTypeInfoContext): TypeInfo {
   if (type.tag === "__builtin_va_list") {
     return {
       tsType: "bigint",
-      nativeType: "pointer",
+      nativeType: "uintptr",
     };
   }
 

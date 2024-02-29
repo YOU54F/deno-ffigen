@@ -47,21 +47,28 @@ function buildSymbols(
   ctx: LibInfo,
   functions: Map<string, FunctionDef>,
 ): string {
-  const symbolsGen = [...functions.entries()].map(([name, f]) => {
+  const genFuncs = [...functions.entries()].map(([name, f]) => {
     const parameters = f.parameters
       .map((p) => `${p.type.nativeType}`)
-      .join(" ");
+      .join(", ");
 
     return m`
-        attach_function :${name}, %i[${parameters}], :${f.result.nativeType}
+        var ${name} func(${parameters}) ${f.result.nativeType}
+      `;
+  }).join("\n");
+  const genRegisterLibFunc = [...functions.entries()].map(([name, f]) => {
+    return m`
+        purego.RegisterLibFunc(&${name}, libpact_ffi, "${name}")
       `;
   }).join("\n");
 
   return m`
-    export const ${ctx.name}_SYMBOLS = {
-    ${symbolsGen}
-    } as const;
 
+      type (
+        size_t         uintptr
+      )
+    ${genFuncs}
+    ${genRegisterLibFunc}
     `;
 }
 
