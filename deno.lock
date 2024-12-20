@@ -1,0 +1,13 @@
+{
+  "version": "4",
+  "remote": {
+    "https://raw.githubusercontent.com/glebbash/multiline-str/master/src/multiline-str.ts": "6914f9cfc2575b3ddd3851adf24a81a5a9427fe3ee6aa01e74e0653f78258369"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:bun-types@0.3"
+      ]
+    }
+  }
+}

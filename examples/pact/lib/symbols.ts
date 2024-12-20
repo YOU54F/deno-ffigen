@@ -39,6 +39,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_async_message_new, %i[], :pointer
   attach_function :pactffi_async_message_delete, %i[pointer], :void
   attach_function :pactffi_async_message_get_contents, %i[pointer], :pointer
+  attach_function :pactffi_async_message_generate_contents, %i[pointer], :pointer
   attach_function :pactffi_async_message_get_contents_str, %i[pointer], :string
   attach_function :pactffi_async_message_set_contents_str, %i[pointer string string], :void
   attach_function :pactffi_async_message_get_contents_length, %i[pointer], :size_t
@@ -51,6 +52,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_consumer_get_name, %i[pointer], :string
   attach_function :pactffi_pact_get_consumer, %i[pointer], :pointer
   attach_function :pactffi_pact_consumer_delete, %i[pointer], :void
+  attach_function :pactffi_message_contents_delete, %i[pointer], :void
   attach_function :pactffi_message_contents_get_contents_str, %i[pointer], :string
   attach_function :pactffi_message_contents_set_contents_str, %i[pointer string string], :void
   attach_function :pactffi_message_contents_get_contents_length, %i[pointer], :size_t
@@ -107,6 +109,8 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_pact_interaction_as_synchronous_message, %i[pointer], :pointer
   attach_function :pactffi_pact_message_iter_delete, %i[pointer], :void
   attach_function :pactffi_pact_message_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_async_message_iter_next, %i[pointer], :pointer
+  attach_function :pactffi_pact_async_message_iter_delete, %i[pointer], :void
   attach_function :pactffi_pact_sync_message_iter_next, %i[pointer], :pointer
   attach_function :pactffi_pact_sync_message_iter_delete, %i[pointer], :void
   attach_function :pactffi_pact_sync_http_iter_next, %i[pointer], :pointer
@@ -167,6 +171,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_sync_message_get_request_contents_bin, %i[pointer], :pointer
   attach_function :pactffi_sync_message_set_request_contents_bin, %i[pointer pointer size_t string], :void
   attach_function :pactffi_sync_message_get_request_contents, %i[pointer], :pointer
+  attach_function :pactffi_sync_message_generate_request_contents, %i[pointer], :pointer
   attach_function :pactffi_sync_message_get_number_responses, %i[pointer], :size_t
   attach_function :pactffi_sync_message_get_response_contents_str, %i[pointer size_t], :string
   attach_function :pactffi_sync_message_set_response_contents_str, %i[pointer size_t string string], :void
@@ -174,6 +179,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_sync_message_get_response_contents_bin, %i[pointer size_t], :pointer
   attach_function :pactffi_sync_message_set_response_contents_bin, %i[pointer size_t pointer size_t string], :void
   attach_function :pactffi_sync_message_get_response_contents, %i[pointer size_t], :pointer
+  attach_function :pactffi_sync_message_generate_response_contents, %i[pointer size_t], :pointer
   attach_function :pactffi_sync_message_get_description, %i[pointer], :string
   attach_function :pactffi_sync_message_set_description, %i[pointer string], :int32
   attach_function :pactffi_sync_message_get_provider_state, %i[pointer uint32_t], :pointer
@@ -193,6 +199,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_generate_regex_value, %i[string], :pointer
   attach_function :pactffi_free_string, %i[string], :void
   attach_function :pactffi_new_pact, %i[string string], :uint16
+  attach_function :pactffi_pact_handle_to_pointer, %i[uint16], :pointer
   attach_function :pactffi_new_interaction, %i[uint16 string], :uint32_t
   attach_function :pactffi_new_message_interaction, %i[uint16 string], :uint32_t
   attach_function :pactffi_new_sync_message_interaction, %i[uint16 string], :uint32_t
@@ -205,14 +212,27 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_with_query_parameter, %i[uint32_t string size_t string], :bool
   attach_function :pactffi_with_query_parameter_v2, %i[uint32_t string size_t string], :bool
   attach_function :pactffi_with_specification, %i[uint16 int32], :bool
+  attach_function :pactffi_handle_get_pact_spec_version, %i[uint16], :int32
   attach_function :pactffi_with_pact_metadata, %i[uint16 string string string], :bool
+  attach_function :pactffi_with_metadata, %i[uint32_t string string int32], :bool
   attach_function :pactffi_with_header, %i[uint32_t int32 string size_t string], :bool
   attach_function :pactffi_with_header_v2, %i[uint32_t int32 string size_t string], :bool
+  attach_function :pactffi_set_header, %i[uint32_t int32 string string], :bool
   attach_function :pactffi_response_status, %i[uint32_t uint16], :bool
+  attach_function :pactffi_response_status_v2, %i[uint32_t string], :bool
   attach_function :pactffi_with_body, %i[uint32_t int32 string string], :bool
+  attach_function :pactffi_with_binary_body, %i[uint32_t int32 string pointer size_t], :bool
   attach_function :pactffi_with_binary_file, %i[uint32_t int32 string pointer size_t], :bool
+  attach_function :pactffi_with_matching_rules, %i[uint32_t int32 string], :bool
+  attach_function :pactffi_with_generators, %i[uint32_t int32 string], :bool
+  attach_function :pactffi_with_multipart_file_v2, %i[uint32_t int32 string string string string], :pointer
   attach_function :pactffi_with_multipart_file, %i[uint32_t int32 string string string], :pointer
+  attach_function :pactffi_set_key, %i[uint32_t string], :bool
+  attach_function :pactffi_set_pending, %i[uint32_t bool], :bool
+  attach_function :pactffi_set_comment, %i[uint32_t string string], :bool
+  attach_function :pactffi_add_text_comment, %i[uint32_t string], :bool
   attach_function :pactffi_pact_handle_get_message_iter, %i[uint16], :pointer
+  attach_function :pactffi_pact_handle_get_async_message_iter, %i[uint16], :pointer
   attach_function :pactffi_pact_handle_get_sync_message_iter, %i[uint16], :pointer
   attach_function :pactffi_pact_handle_get_sync_http_iter, %i[uint16], :pointer
   attach_function :pactffi_new_message_pact, %i[string string], :uint16
@@ -222,6 +242,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_message_given_with_param, %i[uint32_t string string string], :void
   attach_function :pactffi_message_with_contents, %i[uint32_t string pointer size_t], :void
   attach_function :pactffi_message_with_metadata, %i[uint32_t string string], :void
+  attach_function :pactffi_message_with_metadata_v2, %i[uint32_t string string], :void
   attach_function :pactffi_message_reify, %i[uint32_t], :string
   attach_function :pactffi_write_message_pact_file, %i[uint16 string bool], :int32
   attach_function :pactffi_with_message_pact_metadata, %i[uint16 string string string], :void
@@ -247,7 +268,7 @@ export const PactFfi_SYMBOLS = {
   attach_function :pactffi_verifier_add_directory_source, %i[pointer string], :void
   attach_function :pactffi_verifier_url_source, %i[pointer string string string string], :void
   attach_function :pactffi_verifier_broker_source, %i[pointer string string string string], :void
-  attach_function :pactffi_verifier_broker_source_with_selectors, %i[pointer string string string string uint8 string pointer uint16 string pointer uint16 pointer uint16], :void
+  attach_function :pactffi_verifier_broker_source_with_selectors, %i[pointer string string string string uint8 string pointer uint16 string pointer uint16 pointer uint16], :int32
   attach_function :pactffi_verifier_execute, %i[pointer], :int32
   attach_function :pactffi_verifier_cli_args, %i[], :string
   attach_function :pactffi_verifier_logs, %i[pointer], :string
