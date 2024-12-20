@@ -52,8 +52,9 @@ function buildSymbols(
       .map((p) => `${p.type.nativeType}`)
       .join(" ");
 
+    const strippedName = name.replace(/^pactffi_/, '');
     return m`
-        attach_function :${name}, %i[${parameters}], :${f.result.nativeType}
+      attach_function :${strippedName}, :${name}, %i[${parameters}], :${f.result.nativeType}
       `;
   }).join("\n");
 
